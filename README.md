@@ -37,7 +37,7 @@ npm install -g commitizen
 ```
 1. Fork it!
 2. Create a branch `git checkout my-great-feature`
-3. Commit your changes
+3. Commit your changes `git cz`
 4. Submit a pull request
 
 ### Contributors
