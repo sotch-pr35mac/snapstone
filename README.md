@@ -6,7 +6,7 @@
 ### About
 Snapstone is an open source, cross platform, OCR (Optical Character Recognition) for Chinese character lookup. Don't know what that character is? Just snap a picture of it.
 
-## Name
+#### Name
 __Snap__ a picture + Rosetta __Stone__ = __Snapstone__
 
 ### Features
