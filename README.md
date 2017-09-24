@@ -43,7 +43,7 @@ npm install -g commitizen
 ### Contributors
 - [Alex Cadigan](https://github.com/AlexCadigan)
 - [Danny Michelin](https://github.com/dmichelin)
-- [Preston Wang-Stosur-Bassett](https://github.com/sotch-pr35mac)
+- [Preston Wang-Stosur-Bassett](http://stosur.info)
 
 ### License
 This software is licensed under the [GNU Public License v3]().
