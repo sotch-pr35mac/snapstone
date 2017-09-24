@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/res/merged/F0/debug/drawable-xhdpi/icon.png",
+        "source": "/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/src/main/res/drawable-xhdpi/icon.png"
+    },
+    {
+        "merged": "/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/res/merged/F0/debug/drawable-xhdpi/background.png",
+        "source": "/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/src/main/res/drawable-xhdpi/background.png"
+    },
+    {
+        "merged": "/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/res/merged/F0/debug/drawable-xhdpi/logo.png",
+        "source": "/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/src/main/res/drawable-xhdpi/logo.png"
+    }
+]
