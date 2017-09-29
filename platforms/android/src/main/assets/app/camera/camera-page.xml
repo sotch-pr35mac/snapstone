@@ -1,9 +1,0 @@
-<Page loaded="loaded" class="page"
-    navigatingTo="onNavigatingTo"
-    xmlns="http://www.nativescript.org/tns.xsd">
-
-    <StackLayout id="swipable">
-      <Label text="Camera (swipe to navigate)" textWrap="true" />
-      <Button tap="buttonTap" text="Take Picture" />
-    </StackLayout>
-</Page>
