@@ -1,4 +1,4 @@
-<Page class="page"
+<Page loaded="loaded" class="page"
     navigatingTo="onNavigatingTo"
     xmlns="http://www.nativescript.org/tns.xsd">
 

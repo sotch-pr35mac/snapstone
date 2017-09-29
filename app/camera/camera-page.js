@@ -14,6 +14,7 @@ var gestures = require('ui/gestures');
 var frameModule = require('ui/frame');
 var CameraViewModel = require('./camera-view-model');
 var camera = require("nativescript-camera");
+var ImageModule = require("ui/image");
 
 var cameraViewModel = new CameraViewModel();
 
@@ -53,13 +54,15 @@ function here makes the navigatingTo="onNavigatingTo" binding in this page’s X
 file work.
 */
 
+exports.loaded = function() {
+    camera.requestPermissions();
+}
 exports.onNavigatingTo = onNavigatingTo;
 exports.buttonTap = function() {
-    camera.requestPermissions();
     camera.takePicture()   
     .then(function (imageAsset) {
         console.log("Result is an image asset instance");
-        var image = new imageModule.Image();
+        var image = new ImageModule.Image();
         image.src = imageAsset;
     }).catch(function (err) {
         console.log("Error -> " + err.message);
