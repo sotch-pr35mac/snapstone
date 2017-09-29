@@ -3,147 +3,147 @@
 
     <item
         is-multidex="false"
-        jar="/opt/android/sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="26.0.1"
-        sha1="023ee503b631f69511e335a061ea008f8da60f40">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/support-annotations-26.0.0-alpha1_fd2ed782522af53652b3f7be9dab087c76bcda1b.jar" />
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-appcompat-v7-25.3.1_d368db80404462f91962f2571a052a1aeef3e424.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/26.0.0-alpha1/jars/classes.jar"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="26.0.1"
-        sha1="952944218ecedea1554a513dec0c14d570642843">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-support-vector-drawable-26.0.0-alpha1_ac08799b1833be7281769ceb4634c9e6fbfdb183.jar" />
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-compat-25.3.1_8b221fa296fa9b0441ab4889669e531c51e803eb.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/snapstone/runtime/unspecified/jars/libs/binding-generator.jar"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\snapstone\runtime\unspecified\jars\libs\binding-generator.jar"
         jumboMode="false"
         optimize="true"
-        revision="26.0.1"
+        revision="25.0.2"
         sha1="a3e74f5f1ebe12c7cfa6591158ef298c95a5275f">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/binding-generator_56a0e01e86ebbf8a8ad074965241105853b522bd.jar" />
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\binding-generator_b3c82a59b9c20089061b8adff07e052ebbc52493.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.0.0-alpha1/jars/classes.jar"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\widgets-release\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="26.0.1"
-        sha1="9935891f23923f39d002087085d9696568a9f657">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-support-media-compat-26.0.0-alpha1_7d75a8c0d218b6c5ab7f3fc6efee0403d181bf76.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/snapstone/runtime/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="eb6078500d1af5e7b663871706674405c57292a3">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/snapstone-runtime-unspecified_300296af7fba29a4e17f47cf4378e4178a090f02.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/26.0.0-alpha1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-support-fragment-26.0.0-alpha1_f21b1576a88c2311df77098cfdfc034dedc8b37b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-appcompat-v7-26.0.0-alpha1_56c0f82c93e03795d0ef3289a84540b396333d69.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/26.0.0-alpha1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-support-core-ui-26.0.0-alpha1_3b298bc31e1bae2f5335a08a08935594e453103d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.0-alpha1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-support-compat-26.0.0-alpha1_8d6b68e3a5d871cd304da7cd76e0a88d0cf283dc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/com.android.support/design/26.0.0-alpha1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
-        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-design-26.0.0-alpha1_96a96eddee4c6cb9c86e122e4ee41c729f0baa77.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/widgets-release/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.1"
+        revision="25.0.2"
         sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/intermediates-exploded-aar-widgets-release_b3d49360986721aa2b718807ede50f9d03f0d993.jar" />
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\intermediates-exploded-aar-widgets-release_87ec064a8a25a1d4afb7fd43ab1c6173712ea394.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/26.0.0-alpha1/jars/classes.jar"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="26.0.1"
-        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-animated-vector-drawable-26.0.0-alpha1_d4128522c1d420d570b200971ac71024b328a9b6.jar" />
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-animated-vector-drawable-25.3.1_9ad604a25dda66577e4ffc4709d4c024023b6f92.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/com.android.support/transition/26.0.0-alpha1/jars/classes.jar"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="26.0.1"
-        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-transition-26.0.0-alpha1_9f364a5d534a3eddcdfd0f47c100743c6fd36a3a.jar" />
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-media-compat-25.3.1_d8feb76e2e60c1aee3e23b97d32b6d65b0710682.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/26.0.0-alpha1/jars/classes.jar"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\com.android.support\design\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="26.0.1"
-        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-recyclerview-v7-26.0.0-alpha1_b69867bba2d12ecb0fb62c2b14467d6d846fcbc9.jar" />
+        revision="25.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-design-25.3.1_49414b50dc0b5a902dfc1cf0664e2611d886c68b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/26.0.0-alpha1/jars/classes.jar"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="26.0.1"
-        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-support-core-utils-26.0.0-alpha1_34b0c682a9c539c8ea12704b0928a546e02e8d49.jar" />
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-vector-drawable-25.3.1_181660f067a8c45a2fddef68f1ae8a8926ecb3e0.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/26.0.0-alpha1/jars/classes.jar"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="26.0.1"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-core-utils-25.3.1_a2f41b758e37c8dd134cfd7d7696595e987ef883.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/pre-dexed/F0/debug/com.android.support-support-v4-26.0.0-alpha1_dc334be29b7e563ed58f536d1f4fc70aab65d062.jar" />
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-v4-25.3.1_d7f98bc9a206a83612752f4358a98eb97f733ea4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\snapstone\runtime\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="eb6078500d1af5e7b663871706674405c57292a3">
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\snapstone-runtime-unspecified_e7683b13bff09262901bca5dfab2b1d2a17ec091.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\support-annotations-25.3.1_07cc1bdab6386cc71ca9e51c0b2d242e9420314e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-recyclerview-v7-25.3.1_680d0cfd270753942157a1d9b27f03aae7301798.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-transition-25.3.1_893ee81e53f561098b455038d815b93b4f1a9035.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-fragment-25.3.1_9f9432d8156b77149ce0b63de13962f22bc98b81.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\school git\snapstone-working\snapstone\platforms\android\build\intermediates\pre-dexed\F0F1\debug\com.android.support-support-core-ui-25.3.1_9d18254dd3fdffe6df4242fbd714430b5b473960.jar" />
     </item>
 
 </items>

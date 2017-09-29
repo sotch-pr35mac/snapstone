@@ -13,6 +13,7 @@ var stackModule = require('ui/layouts/stack-layout');
 var gestures = require('ui/gestures');
 var frameModule = require('ui/frame');
 var CameraViewModel = require('./camera-view-model');
+var camera = require("nativescript-camera");
 
 var cameraViewModel = new CameraViewModel();
 
@@ -54,6 +55,15 @@ file work.
 
 exports.onNavigatingTo = onNavigatingTo;
 exports.buttonTap = function() {
+    camera.requestPermissions();
+    camera.takePicture()   
+    .then(function (imageAsset) {
+        console.log("Result is an image asset instance");
+        var image = new imageModule.Image();
+        image.src = imageAsset;
+    }).catch(function (err) {
+        console.log("Error -> " + err.message);
+    });
   console.log('navigate to word detail');
   alert('Navigate to word detail.');
   frameModule.topmost().navigate('word-detail/word-detail-page');

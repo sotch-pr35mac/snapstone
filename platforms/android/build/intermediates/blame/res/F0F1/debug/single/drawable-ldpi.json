@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\school git\\snapstone-working\\snapstone\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-ldpi\\background.png",
+        "source": "C:\\school git\\snapstone-working\\snapstone\\platforms\\android\\src\\main\\res\\drawable-ldpi\\background.png"
+    },
+    {
+        "merged": "C:\\school git\\snapstone-working\\snapstone\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-ldpi\\logo.png",
+        "source": "C:\\school git\\snapstone-working\\snapstone\\platforms\\android\\src\\main\\res\\drawable-ldpi\\logo.png"
+    },
+    {
+        "merged": "C:\\school git\\snapstone-working\\snapstone\\platforms\\android\\build\\intermediates\\res\\merged\\F0F1\\debug\\drawable-ldpi\\icon.png",
+        "source": "C:\\school git\\snapstone-working\\snapstone\\platforms\\android\\src\\main\\res\\drawable-ldpi\\icon.png"
+    }
+]

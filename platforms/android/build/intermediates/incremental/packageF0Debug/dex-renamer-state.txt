@@ -1,4 +1,0 @@
-#Sat Sep 23 19:31:42 EDT 2017
-base.0=/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/transforms/dex/F0/debug/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/home/sotch_pr35mac/Documents/Mobile Computing/Programming Projects/Snapstone/platforms/android/build/intermediates/transforms/dex/F0/debug/folders/1000/1f/main/classes.dex
