@@ -19,10 +19,14 @@
   <!-- Define the the layout -->
   <StackLayout id="swipable">
 
+    <!-- Add the image taken by the user to the page -->
+    <Image id="wordImage" stretch ="none">
+    </Image>
+
     <!-- Add some text to the page -->
     <Label text="Word Detail">
     </Label>
-    
+
   </StackLayout>
 
 </Page>

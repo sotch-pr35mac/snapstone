@@ -80,9 +80,15 @@ exports.openCamera = function() {
     .then(function (imageAsset) {
         var image = new ImageModule.Image();
         image.src = imageAsset;
+        var navigationOptions = {
+            moduleName: 'word-detail/word-detail-page',
+            context: {
+                param1: image
+            }
+        }
 
         // Navigate to the word detail page
-        frameModule.topmost().navigate('word-detail/word-detail-page');
+        frameModule.topmost().navigate(navigationOptions);
     }).catch(function (err) {
       // TODO: Handle the error by showing it to the user somehow
       console.log("Error -> " + err.message);

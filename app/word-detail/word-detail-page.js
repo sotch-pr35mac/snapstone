@@ -8,6 +8,7 @@
 
 // Require dependencies
 var stackModule = require('ui/layouts/stack-layout'); // Stack layout module for the XML file
+var view = require("ui/core/view");
 var gestures = require('ui/gestures'); // Gestures Module to handle gestures and swipes
 var frameModule = require('ui/frame'); // Frame Module that handles views and navigation
 var WordDetailViewModel = require('./word-detail-view-model'); // The Model of the word detail page
@@ -27,6 +28,15 @@ var navigateHome = {
 // Load this function when navigating to this page
 function onNavigatingTo(args) {
   var page = args.object;
+
+  // Grab the image that we just took
+  var imageData = page.navigationContext;
+
+  // Get the image view we need
+  var imageView = view.getViewById(page, "wordImage");
+
+  // Set the image view
+  imageView.src = imageData.param1.src;
 
   // Define swipable gestures and their actions
   var myStack = page.getViewById('swipable');
