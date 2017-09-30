@@ -1,1 +1,10 @@
-@import url(nativescript-theme-core/css/core.light.css);.btn{font-size:18}
+@import '~/nativescript-theme-core/css/ruby.css';
+btn{font-size:18}
+.fab {
+    height: 70;
+    width: 70;
+    margin: 15;
+    background-color: #FF1734;
+    horizontal-align: right;
+    vertical-align: bottom;
+}

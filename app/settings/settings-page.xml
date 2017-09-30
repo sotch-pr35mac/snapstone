@@ -3,9 +3,10 @@
   xmlns="https://www.nativescript.org/tns.xsd">
 
   <ActionBar title="Settings" class="action-bar">
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack"/>
   </ActionBar>
   <StackLayout id="swipable">
-    <Label text="Settings (swipe up to navigate back to camera)">
+    <Label text="Settings will go here">
     </Label>
   </StackLayout>
 

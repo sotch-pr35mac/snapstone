@@ -25,15 +25,6 @@ function onNavigatingTo(args) {
     https://docs.nativescript.org/api-reference/classes/_ui_page_.page.html
     */
     var page = args.object;
-
-    var myStack = page.getViewById('swipable');
-    myStack.on(gestures.GestureTypes.swipe, function(args) {
-      if(args.direction == gestures.SwipeDirection.right) {
-        console.log('Pull out sidebar gets displayed');
-        alert('Pull out sidebar gets displayed');
-      }
-    });
-
     /*
     A page’s bindingContext is an object that should be used to perform
     data binding between XML markup and JavaScript code. Properties
@@ -58,8 +49,8 @@ exports.loaded = function() {
     camera.requestPermissions();
 }
 exports.onNavigatingTo = onNavigatingTo;
-exports.buttonTap = function() {
-    camera.takePicture()   
+exports.openCamera = function() {
+    camera.takePicture()
     .then(function (imageAsset) {
         console.log("Result is an image asset instance");
         var image = new ImageModule.Image();
@@ -68,6 +59,9 @@ exports.buttonTap = function() {
         console.log("Error -> " + err.message);
     });
   console.log('navigate to word detail');
-  alert('Navigate to word detail.');
   frameModule.topmost().navigate('word-detail/word-detail-page');
+}
+
+exports.openSettings = function() {
+  frameModule.topmost().navigate('settings/settings-page');
 }

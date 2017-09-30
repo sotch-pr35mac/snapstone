@@ -1,8 +1,10 @@
 {
   "description": "OCR Character Lookup for Chinese",
-  "license": "SEE LICENSE IN <your-license-filename>",
-  "readme": "NativeScript Application",
-  "repository": "<fill-your-repository-here>",
+  "license": "GNU Public License v3",
+  "readme": "README.md",
+  "version": "0.0.1",
+  "name": "Snapstone",
+  "repository": "https://github.com/sotch-pr35mac/snapstone",
   "nativescript": {
     "id": "org.kzoo.snapstone",
     "tns-android": {
@@ -11,6 +13,7 @@
   },
   "dependencies": {
     "nativescript-camera": "^3.1.2",
+    "nativescript-floatingactionbutton": "^3.0.1",
     "nativescript-theme-core": "1.0.4",
     "tns-core-modules": "3.2.0"
   },

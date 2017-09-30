@@ -3,6 +3,7 @@
   xmlns="https://www.nativescript.org/tns.xsd">
 
   <ActionBar title="Word Detail" class="action-bar">
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack"/>
   </ActionBar>
   <StackLayout id="swipable">
     <Label text="Word Detail">
