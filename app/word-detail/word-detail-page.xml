@@ -6,6 +6,8 @@
     <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack"/>
   </ActionBar>
   <StackLayout id="swipable">
+    <Image id="wordImage" stretch ="none">
+      </Image>
     <Label text="Word Detail">
     </Label>
   </StackLayout>
