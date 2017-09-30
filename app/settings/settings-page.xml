@@ -1,13 +1,28 @@
+<!--
+  @file         ::  app/settings/settings-page.xml
+  @authors      ::  Preston Wang-Stosur-Bassett <preston.wang-stosur-bassett14@kzoo.edu> (IF YOU EDIT THIS FILE ADD YOUR NAME AND EMAIL TO THIS LINE)
+  @created      ::  Sept 24, 2017
+  @updated      ::  Sept 30, 2017 - Preston Wang-Stosur-Bassett - Added Comments (IF YOU EDIT THIS FILE, REPLACE THIS LINE WITH THE DATE, YOUR NAME, AND UPDATES)
+  @description  ::  This is the XML file that defines the layout for the Settings page
+-->
+
+<!-- Define the page using the nativescript namespace and calling onNavigatingTo (defined in app/settings/settings-page.js) to when navigated to -->
 <Page class="page"
   navigatingTo="onNavigatingTo"
   xmlns="https://www.nativescript.org/tns.xsd">
 
+  <!-- Define the ActionBar (the bar at the top with the title of the page and some navigation options) -->
   <ActionBar title="Settings" class="action-bar">
     <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack"/>
   </ActionBar>
+
+  <!-- Define the layout -->
   <StackLayout id="swipable">
+
+    <!-- Add some text to the page -->
     <Label text="Settings will go here">
     </Label>
+    
   </StackLayout>
 
 </Page>

@@ -17,6 +17,7 @@ __Snap__ a picture + Rosetta __Stone__ = __Snapstone__
 
 ### Progress
 - The app launches
+- The camera launches and takes a picture
 
 ### Built On
 - [NativeScript](https://www.nativescript.org/)

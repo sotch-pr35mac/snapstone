@@ -3,5 +3,5 @@ if (global.TNS_WEBPACK) {
     require("bundle-entry-points");
 
     //register application modules
-    global.registerModule("camera/camera-page", function () { return require("./camera/camera"); });
+    global.registerModule("home/home-page", function () { return require("./home/home"); });
 }
