@@ -7,12 +7,11 @@
 */
 
 // Require dependencies
-var stackModule = require('ui/layouts/stack-layout');
 var gestures = require('ui/gestures');
 var frameModule = require('ui/frame');
 var SettingsViewModel = require('./settings-view-model');
 
-settingsViewModel = new SettingsViewModel();
+var settingsViewModel = new SettingsViewModel();
 
 // Define the default behavior for navigating home using this global navingateHome object
 var navigateHome = {
@@ -20,7 +19,7 @@ var navigateHome = {
   animated: true,
   backstackVisible: false,
   transition: {
-    name: "slideRight"
+    name: 'slideRight'
   }
 };
 

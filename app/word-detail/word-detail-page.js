@@ -7,13 +7,12 @@
 */
 
 // Require dependencies
-var stackModule = require('ui/layouts/stack-layout'); // Stack layout module for the XML file
-var view = require("ui/core/view");
+var view = require('ui/core/view');
 var gestures = require('ui/gestures'); // Gestures Module to handle gestures and swipes
 var frameModule = require('ui/frame'); // Frame Module that handles views and navigation
 var WordDetailViewModel = require('./word-detail-view-model'); // The Model of the word detail page
 
-wordDetailViewModel = new WordDetailViewModel();
+var wordDetailViewModel = new WordDetailViewModel();
 
 // Gloabl navigateHome object that defines the behavior for navigating home
 var navigateHome = {
@@ -21,7 +20,7 @@ var navigateHome = {
   animated: true,
   backstackVisible: false,
   transition: {
-    name: "slideRight"
+    name: 'slideRight'
   }
 };
 
@@ -33,7 +32,7 @@ function onNavigatingTo(args) {
   var imageData = page.navigationContext;
 
   // Get the image view we need
-  var imageView = view.getViewById(page, "wordImage");
+  var imageView = view.getViewById(page, 'wordImage');
 
   // Set the image view
   imageView.src = imageData.param1.src;

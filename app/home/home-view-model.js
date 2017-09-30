@@ -6,12 +6,12 @@
  *  @description  ::  Defines the view model for the file app/home/home-page.js
 */
 
-var Observable = require("data/observable").Observable;
+var Observable = require('data/observable').Observable;
 
 function HomeViewModel() {
-    var viewModel = new Observable();
+  var viewModel = new Observable();
 
-    return viewModel;
+  return viewModel;
 }
 
 // Add HomeViewModel to the module.exports so that it can be accessed in the home-page.js
