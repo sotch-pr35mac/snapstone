@@ -5,6 +5,8 @@
   <ActionBar title="Word Detail" class="action-bar">
   </ActionBar>
   <StackLayout id="swipable">
+    <Image id="wordImage" stretch ="none">
+      </Image>
     <Label text="Word Detail">
     </Label>
   </StackLayout>

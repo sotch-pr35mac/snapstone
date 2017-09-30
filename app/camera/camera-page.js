@@ -64,10 +64,17 @@ exports.buttonTap = function() {
         console.log("Result is an image asset instance");
         var image = new ImageModule.Image();
         image.src = imageAsset;
+        var navigationOptions = {
+            moduleName: 'word-detail/word-detail-page',
+            context: {
+                param1: image
+            }
+        }
+        console.log('navigate to word detail');
+        alert('Navigate to word detail.');
+        frameModule.topmost().navigate(navigationOptions);
+
     }).catch(function (err) {
         console.log("Error -> " + err.message);
     });
-  console.log('navigate to word detail');
-  alert('Navigate to word detail.');
-  frameModule.topmost().navigate('word-detail/word-detail-page');
 }
