@@ -19,6 +19,7 @@ var navigateHome = {
   moduleName: 'home/home-page',
   animated: true,
   backstackVisible: false,
+  clearHistory: true,
   transition: {
     name: 'slideRight'
   }
