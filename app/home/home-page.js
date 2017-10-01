@@ -122,4 +122,4 @@ exports.openAbout = function() {
       name: 'slideLeft'
     }
   });
-}
+};
