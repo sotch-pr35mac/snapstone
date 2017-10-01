@@ -7,7 +7,6 @@
 */
 
 // Require dependencies
-var view = require('ui/core/view');
 var gestures = require('ui/gestures'); // Gestures Module to handle gestures and swipes
 var frameModule = require('ui/frame'); // Frame Module that handles views and navigation
 var WordDetailViewModel = require('./word-detail-view-model'); // The Model of the word detail page
@@ -33,7 +32,7 @@ function onNavigatingTo(args) {
   var imageData = page.navigationContext;
 
   // Get the image view we need
-  var imageView = view.getViewById(page, 'wordImage');
+  var imageView = page.getViewById('wordImage');
 
   // Set the image view
   imageView.src = imageData.param1.src;
