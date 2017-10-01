@@ -16,17 +16,26 @@
     <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack"/>
   </ActionBar>
 
-  <!-- Define the the layout -->
-  <StackLayout id="swipable">
+  <!-- Add a scroll view so the page is scrollable -->
+  <ScrollView orientation="vertical">
+    <!-- Define the the layout -->
+    <StackLayout id="swipable">
 
-    <!-- Add the image taken by the user to the page -->
-    <Image id="wordImage" stretch ="none">
-    </Image>
+      <!-- Add the image taken by the user to the page -->
+      <Image id="wordImage" stretch ="aspectFill" width="100%">
+      </Image>
 
-    <!-- Add some text to the page -->
-    <Label text="Word Detail">
-    </Label>
+      <!-- Add some text to the page -->
+      <Label text="Traditional | Simplified" class="h2">
+      </Label>
+      <Label text="pinyin" class="h3">
+      </Label>
+      <Label text="* Definition 1" class="h3">
+      </Label>
+      <Label text="* Definition 2" class="h3">
+      </Label>
 
-  </StackLayout>
+    </StackLayout>
+  </ScrollView>
 
 </Page>
