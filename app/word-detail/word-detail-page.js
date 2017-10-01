@@ -1,47 +1,63 @@
-var stackModule = require('ui/layouts/stack-layout');
-var view = require("ui/core/view");
-var gestures = require('ui/gestures');
-var frameModule = require('ui/frame');
-var WordDetailViewModel = require('./word-detail-view-model');
+/*
+ *  @file         ::  app/word-detail/word-detail-page.js
+ *  @authors      ::  Preston Wang-Stosur-Bassett <preston.wang-stosur-bassett14@kzoo.edu> (IF YOU EDIT THIS FILE, ADD YOUR NAME AND A METHOD OF CONTACT TO THIS LINE)
+ *  @created      ::  Sept 24, 2017
+ *  @updated      ::  Sept 29, 2017 - Preston Wang-Stosur-Bassett (IF YOU EDIT THIS FILE, REPLACE THIS LINE WITH YOUR NAME AND THE DATE, AND ADD YOURSELF TO THE LIST OF AUTHORS)
+ *  @description  ::  This file contains the main logic for the word detail page, which is where the app navigates after a picture is taken
+*/
 
-wordDetailViewModel = new WordDetailViewModel();
+// Require dependencies
+var view = require('ui/core/view');
+var gestures = require('ui/gestures'); // Gestures Module to handle gestures and swipes
+var frameModule = require('ui/frame'); // Frame Module that handles views and navigation
+var WordDetailViewModel = require('./word-detail-view-model'); // The Model of the word detail page
 
+var wordDetailViewModel = new WordDetailViewModel();
+
+// Gloabl navigateHome object that defines the behavior for navigating home
 var navigateHome = {
-  moduleName: 'camera/camera-page',
+  moduleName: 'home/home-page',
   animated: true,
   backstackVisible: false,
   transition: {
-    name: "slideRight"
+    name: 'slideRight'
   }
 };
 
+// Load this function when navigating to this page
 function onNavigatingTo(args) {
   var page = args.object;
-    
+
   // Grab the image that we just took
   var imageData = page.navigationContext;
-  console.log(imageData.param1);
-    
+
   // Get the image view we need
-  var imageView = view.getViewById(page, "wordImage");
-    
+  var imageView = view.getViewById(page, 'wordImage');
+
   // Set the image view
   imageView.src = imageData.param1.src;
+
+  // Define swipable gestures and their actions
   var myStack = page.getViewById('swipable');
   myStack.on(gestures.GestureTypes.swipe, function(args) {
     if(args.direction == gestures.SwipeDirection.right) {
+      // When swipe right, navigate home using the behavior defined in the global navigateHome object
       frameModule.topmost().navigate(navigateHome);
-      // frameModule.topmost().navigate('camera/camera-page');
     }
   });
 
+  // Add the model to the page
   page.bindingContext = wordDetailViewModel;
 }
 
-function goBack() {
+// add the function goBack to the module.exports so it can be accessed on the xml page
+/*
+ *  @function     ::  goBack()
+ *  @description  ::  navigate home using the behavior defined in the global navigateHome object
+*/
+exports.goBack = function() {
   frameModule.topmost().navigate(navigateHome);
-  // frameModule.topmost().navigate('camera/camera-page');
-}
+};
 
-exports.goBack = goBack;
+// Add the onNavigatingTo function to module.exports so it can be accessed on the xml page
 exports.onNavigatingTo = onNavigatingTo;

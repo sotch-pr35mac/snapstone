@@ -1,6 +1,6 @@
 {
   "description": "OCR Character Lookup for Chinese",
-  "license": "GNU Public License v3",
+  "license": "GPL-3.0",
   "readme": "README.md",
   "version": "0.0.1",
   "name": "Snapstone",
@@ -23,14 +23,19 @@
     "babel-types": "6.26.0",
     "babylon": "6.18.0",
     "cz-conventional-changelog": "^2.0.0",
-    "lazy": "1.0.11"
+    "eslint": "^4.8.0",
+    "lazy": "1.0.11",
+    "precommit-hook-eslint": "^3.0.0"
   },
   "scripts": {
-    "start": "tns run"
+    "start": "tns run",
+    "lint": "./node_modules/.bin/eslint ./app/*.js ./app/*/*.js",
+    "validate": "npm ls"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "pre-commit": ["lint"]
 }
