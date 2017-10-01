@@ -26,13 +26,7 @@ function onNavigatingTo(args) {
     */
     var page = args.object;
 
-    var myStack = page.getViewById('swipable');
-    myStack.on(gestures.GestureTypes.swipe, function(args) {
-      if(args.direction == gestures.SwipeDirection.right) {
-        console.log('Pull out sidebar gets displayed');
-        alert('Pull out sidebar gets displayed');
-      }
-    });
+
 
     /*
     A page’s bindingContext is an object that should be used to perform
@@ -58,7 +52,7 @@ exports.loaded = function() {
     camera.requestPermissions();
 }
 exports.onNavigatingTo = onNavigatingTo;
-exports.buttonTap = function() {
+exports.openCamera = function() {
     camera.takePicture()   
     .then(function (imageAsset) {
         console.log("Result is an image asset instance");
