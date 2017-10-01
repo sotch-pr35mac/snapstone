@@ -15,6 +15,7 @@
     <!-- Define the ActionBar (the bar at the top with the title of the page and some navigation options) -->
     <ActionBar title="Snapstone" class="action-bar">
       <ActionItem tap="openSettings" ios.position="right" text="Settings" android.position="popup" />
+      <ActionItem tap="openAbout" ios.position="right" ios.systemIcon="9" text="About" android.position="popup" />
     </ActionBar>
 
     <!-- Define the layout -->

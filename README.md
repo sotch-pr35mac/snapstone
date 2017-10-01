@@ -29,7 +29,7 @@ __Snap__ a picture + Rosetta __Stone__ = __Snapstone__
 2. [Install NativeScript](http://docs.nativescript.org/start/quick-setup) and iOS and Android SDKs.
 3. Clone the project `git clone https://github.com/sotch-pr35mac/snapstone.git`
 4. Install dependencies `npm install`
-5. Launch Snapstone `tns run [android | ios]` *If you encounter any errors during this step it is probably because your SDKs weren't setup properly.*
+5. Launch Snapstone `npm start` *If you encounter any errors during this step it is probably because your SDKs weren't setup properly.*
 
 ### Contribute
 This is a [Commitizen Friendly](https://github.com/commitizen/cz-cli) repository. When contributing please use commitizen when committing changes. You can install comiitizen using npm:
@@ -37,9 +37,10 @@ This is a [Commitizen Friendly](https://github.com/commitizen/cz-cli) repository
 npm install -g commitizen
 ```
 1. Fork it!
-2. Create a branch `git checkout my-great-feature`
-3. Commit your changes `git cz`
-4. Submit a pull request
+2. Start from the develop branch `git checkout develop`
+3. Create a branch `git checkout -b my-great-feature`
+4. Commit your changes `git cz`
+5. Submit a pull request
 
 ### Contributors
 - [Alex Cadigan](https://github.com/AlexCadigan)

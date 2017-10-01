@@ -15,9 +15,10 @@ To commit using Commitizen, all you have to do is run `git cz` instead of `git c
 
 ## Adding a Feature
 1. Fork it!
-2. Create a branch `git checkout my-great-feature`
-3. Commit your changes `git cz`
-4. Submit a pull request
+2. Start from develop branch `git checkout develop`
+3. Create a branch `git checkout -b my-great-feature`
+4. Commit your changes `git cz`
+5. Submit a pull request
 
 ## Documentation / Code Clarity
 Please document your code as clearly as possible. For variables, use clear and understandable variable names. Pull requests with single character variable names and spaghetti code will not be accepted.
