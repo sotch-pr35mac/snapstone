@@ -76,8 +76,8 @@ exports.onNavigatingTo = onNavigatingTo;
  *  @description  ::  Open the camera and allow the user to take a picture
 */
 exports.openCamera = function() {
-  // TODO: Add more comments around here
-  camera.takePicture()
+  // TODO: Do more comments here
+  camera.takePicture({height: 300})
     .then(function (imageAsset) {
       function getEditableImage(assetSource) {
         if(app.android) {
