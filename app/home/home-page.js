@@ -85,7 +85,7 @@ exports.openCamera = function() {
       var image = new ImageModule.Image();
       image.src = imageAsset;
       // TODO: Figure out why this has to be android
-      var editableImage = imageSource.fromFile(image.src.android);
+      //var editableImage = imageSource.fromFile(image.src.android);
 
       function getEditableImage(assetSource) {
         if(app.android) {
