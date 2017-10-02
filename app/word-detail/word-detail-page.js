@@ -11,7 +11,6 @@ var gestures = require('ui/gestures'); // Gestures Module to handle gestures and
 var frameModule = require('ui/frame'); // Frame Module that handles views and navigation
 var WordDetailViewModel = require('./word-detail-view-model'); // The Model of the word detail page
 var OCRPlugin = require('nativescript-ocr'); // Require the nativescript-orc pluggin, which makes it easy for us to use Tesseract.js inside of our nativescript app
-var imageSource = require('image-source');
 
 var ocr = new OCRPlugin.OCR();
 var wordDetailViewModel = new WordDetailViewModel();
@@ -35,15 +34,13 @@ function onNavigatingTo(args) {
   var imageData = page.navigationContext;
 
   // Get the image view we need
-  var imageView = page.getViewById('wordImage');
+  //var imageView = page.getViewById('wordImage');
 
   // Set the image view
-  imageView.src = imageData.param1.src;
+  //imageView.src = imageData.param1.src;
 
-  var readableImage = imageSource.fromFile(imageData.param1.src.android);
+  //var readableImage = imageSource.fromFile(imageData.param1.src.android);
   //var readableImage = imageSource.fromFile('~/test-ocr-nativescript.png');
-
-  console.log(JSON.stringify(readableImage));
 
   /*
    *  TODO: Get this part working fully
