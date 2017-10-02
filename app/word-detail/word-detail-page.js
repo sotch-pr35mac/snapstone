@@ -50,7 +50,7 @@ function onNavigatingTo(args) {
   */
   // Read the text in the image, and display it to the console
   ocr.retrieveText({
-    image: readableImage,
+    image: imageData.param1,
     language: 'chi_sim'
   }).then(
     function(result) {

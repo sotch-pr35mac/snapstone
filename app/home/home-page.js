@@ -23,7 +23,11 @@ var frameModule = require('ui/frame'); // Frame Module that handles views and na
 var HomeViewModel = require('./home-view-model'); // The model of the home page
 var camera = require('nativescript-camera'); // Nativescript plugin to work with the system camera
 var ImageModule = require('ui/image'); // Image Module to support images from the camera
+var icModule = require('nativescript-imagecropper'); // Image Cropping module for cropping the picture after it has been taken
+var imageSource = require('image-source'); // TODO: Add comments here
+var app = require('application'); // TODO: Add comments here
 
+var cropper = new icModule.ImageCropper();
 var homeViewModel = new HomeViewModel();
 
 // Load this function when navigating to this page
@@ -75,19 +79,35 @@ exports.onNavigatingTo = onNavigatingTo;
  *  @description  ::  Open the camera and allow the user to take a picture
 */
 exports.openCamera = function() {
+  // TODO: Add more comments around here
   camera.takePicture()
     .then(function (imageAsset) {
       var image = new ImageModule.Image();
       image.src = imageAsset;
-      var navigationOptions = {
-        moduleName: 'word-detail/word-detail-page',
-        context: {
-          param1: image
-        }
-      };
+      // TODO: Figure out why this has to be android
+      var editableImage = imageSource.fromFile(image.src.android);
 
-      // Navigate to the word detail page
-      frameModule.topmost().navigate(navigationOptions);
+      function getEditableImage(assetSource) {
+        if(app.android) {
+          return imageSource.fromFile(assetSource.android);
+        } else if(app.ios) {
+          return imageSource.fromFile(assetSource.ios);
+        }
+      }
+
+      cropper.show(getEditableImage(imageAsset), {width: 300, height: 300}).then(function(croppedImage) {
+        var navigationOptions = {
+          moduleName: 'word-detail/word-detail-page',
+          context: {
+            param1: croppedImage
+          }
+        };
+
+        // Navigate to the word detail page
+        frameModule.topmost().navigate(navigationOptions);
+      }).catch(function(e) {
+        console.log('Error -> ' + JSON.stringify(e));
+      });
     }).catch(function (err) {
       // TODO: Handle the error by showing it to the user somehow
       console.log('Error -> ' + err.message);
