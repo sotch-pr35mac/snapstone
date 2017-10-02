@@ -100,5 +100,26 @@ exports.openCamera = function() {
  *  @description  ::  Navigate to the settings page
 */
 exports.openSettings = function() {
-  frameModule.topmost().navigate('settings/settings-page');
+  frameModule.topmost().navigate({
+    moduleName: 'settings/settings-page',
+    animated: true,
+    transition: {
+      name: 'slideLeft'
+    }
+  });
+};
+
+// Add openAbout to the module.exports so it can be accessed on the xml page
+/*
+ *  @function     ::  openAbout()
+ *  @description  ::  Navigate to the about page
+*/
+exports.openAbout = function() {
+  frameModule.topmost().navigate({
+    moduleName: 'about/about-page',
+    animated: true,
+    transition: {
+      name: 'slideLeft'
+    }
+  });
 };
