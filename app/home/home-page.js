@@ -75,7 +75,7 @@ exports.onNavigatingTo = onNavigatingTo;
  *  @description  ::  Open the camera and allow the user to take a picture
 */
 exports.openCamera = function() {
-  camera.takePicture()
+  camera.takePicture({height: 300})
     .then(function (imageAsset) {
       var image = new ImageModule.Image();
       image.src = imageAsset;
