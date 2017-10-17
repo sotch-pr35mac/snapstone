@@ -9,6 +9,9 @@
     "id": "org.kzoo.snapstone",
     "tns-android": {
       "version": "3.2.0"
+    },
+    "tns-ios": {
+      "version": "3.2.0"
     }
   },
   "dependencies": {
@@ -37,5 +40,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "pre-commit": ["lint"]
+  "pre-commit": [
+    "lint"
+  ]
 }

@@ -1,6 +1,6 @@
 <!--
   @file         ::  app/about/about-page.xml
-  @authors      ::  Preston Wang-Stosur-Bassett <preston.wang-stosur-bassett14@kzoo.edu>
+  @authors      ::  Preston Wang-Stosur-Bassett <preston.wang-stosur-bassett14@kzoo.edu>, Alex Cadigan <alexander.cadigan15@kzoo.edu>
   @created      ::  Spet 30, 2017
   @updated      ::  N/A
   @description  ::  This is the XML file that defines the layout for the About page
@@ -12,7 +12,7 @@
   xlmns="https://www.nativescript.org/tns.xsd">
 
   <!-- Define the ActionBar -->
-  <ActionBar title="About" class="action-bar">
+  <ActionBar title="About Snapstone" class="action-bar">
     <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack" />
   </ActionBar>
 
