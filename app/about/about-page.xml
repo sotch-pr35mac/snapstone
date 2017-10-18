@@ -1,28 +1,62 @@
-<!--
-  @file         ::  app/about/about-page.xml
-  @authors      ::  Preston Wang-Stosur-Bassett <preston.wang-stosur-bassett14@kzoo.edu>, Alex Cadigan <alexander.cadigan15@kzoo.edu>
-  @created      ::  Spet 30, 2017
-  @updated      ::  N/A
-  @description  ::  This is the XML file that defines the layout for the About page
+<!-- Project: Snapstone
+	@authors 			Preston Wang-Stosur-Bassett, Alex Cadigan
+	@created 			9/20/2017
+	@description 		This is the XML file that builds the layout for the About page
 -->
 
-<!-- Define the page using the nativescript namespace and calling onNavigatingTo when navigated to -->
-<Page class="page"
-  navigatingTo="onNavigatingTo"
-  xlmns="https://www.nativescript.org/tns.xsd">
+<!-- Creates the page and calls onNavigatingTo when navigated to -->
+<Page class = "page" navigatingTo = "onNavigatingTo" xlmns = "https://www.nativescript.org/tns.xsd">
 
-  <!-- Define the ActionBar -->
-  <ActionBar title="About Snapstone" class="action-bar">
-    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack" />
-  </ActionBar>
+	<!-- Creates the action bar at the top of the page -->
+	<ActionBar class = "action-bar" title = "About Snapstone">
 
-  <!-- Define the layout -->
-  <StackLayout id="swipable">
+		<!-- Creates a back button -->
+		<NavigationButton text = "Go Back" android.systemIcon = "ic_menu_back" tap = "goBack" />
 
-    <!-- Add some text to the page -->
-    <Label text="About Snapstone information will go here">
-    </Label>
+	</ActionBar>
 
-  </StackLayout>
+	<!-- Creates the layout of the page -->
+	<StackLayout id = "swipeable">
+
+		<!-- Introduction to what Snapstone is -->
+		<Label id = "lblIntroQ" textWrap = "true" text = "What is Snapstone?" />
+		<Label id = "lblIntroA" textWrap = "true" text = "Snapstone is an open source, cross-platform, app that uses OCR (optical character recognition) software to identify and translate Chinese characters.  If you don't know what a character is, just snap a picture of it!" />
+
+		<!-- Explaining the Snapstone name -->
+		<Label id = "lblNameQ" textWrap = "true" text = "What's with the name?" />
+		<Label id = "lblNameA" textWrap = "true" text = "SNAP a picture + Rosetta STONE = SNAPSTONE!" />
+
+		<!-- Sets up the link to the GitHub repositories -->
+		<Label id = "lblCode" textWrap = "true" text = "Source code:" />
+		<GridLayout columns = "*, *" rows = "auto">
+			
+			<Button col = "0" text = "Snapstone" tap = "launchSnapstone" />
+			<Button col = "1" text = "Server" tap = "launchServer" />
+
+		</GridLayout>
+
+		<!-- Sets up links to the developers GitHub accounts and LinkedIn -->
+		<Label id = "lblDevelopers" textWrap = "true" text = "Developers:" />
+
+		<Label id = "lblPreston" textWrap = "true" text = "Preston Wang-Stosur-Bassett" />
+		<GridLayout columns = "*, *" rows = "auto">
+
+			<Button col = "0" text = "GitHub" tap = "launchPrestonGitHub" />
+			<Button col = "1" text = "LinkedIn" tap = "launchPrestonLinkedIn" />
+
+		</GridLayout>
+
+		<Label id = "lblDanny" textWrap = "true" text = "Daniel Michelin" />
+		<GridLayout columns = "*, *" rows = "auto">
+
+			<Button col = "0" text = "GitHub" tap = "launchDannyGitHub" />
+			<Button col = "1" text = "LinkedIn" tap = "launchDannyLinkedIn" />
+
+		</GridLayout>
+
+		<Label id = "lblLionel" textWrap = "true" text = "Lionel Niyongabire" />
+		<Label id = "lblAlex" textWrap = "true" text = "Alex Cadigan" />
+
+	</StackLayout>
 
 </Page>
