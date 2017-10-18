@@ -87,51 +87,19 @@
 	text-align: center;
 	color: blue;
 	font-weight: bold;
-	padding-bottom: 25px;
 }
 
 /**
-* This styles Preston's name
+*   This styles the names of the developers
 */
-#lblPreston
+.lblDevName
 {
+    padding-top: 25px;
 	text-align: center;
 	color: red;
 	padding-bottom: 25px;
 }
 
-/**
-* This styles Danny's name
-*/
-#lblDanny
-{
-	padding-top: 25px;
-	text-align: center;
-	color: red;
-	padding-bottom: 25px;
-}
-
-/**
-* This styles Lionel's name
-*/
-#lblLionel
-{
-	padding-top: 25px;
-	text-align: center;
-	color: red;
-	padding-bottom: 25px;
-}
-
-/**
-* This styles Alex's name
-*/
-#lblAlex
-{
-	padding-top: 25px;
-	text-align: center;
-	color: red;
-	padding-bottom: 25px;
-}
 
 /**
 * This styles the license label

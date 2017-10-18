@@ -13,15 +13,15 @@
     },
     "rules": {
         "indent": [
-            "error",
-            2
+            "warn",
+            1
         ],
         "quotes": [
-            "error",
+            "warn",
             "single"
         ],
         "semi": [
-            "error",
+            "warn",
             "always"
         ],
         "no-console": 0

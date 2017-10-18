@@ -56,7 +56,7 @@
 				<!-- Sets up links to the developers GitHub accounts and LinkedIn -->
 				<Label id = "lblDevelopers" row = "14" textWrap = "true" text = "Developers:" />
 
-				<Label id = "lblPreston" row = "15" textWrap = "true" text = "Preston Wang-Stosur-Bassett" />
+				<Label class = "lblDevName" row = "15" textWrap = "true" text = "Preston Wang-Stosur-Bassett" />
 				<GridLayout row = "16" columns = "*, *" rows = "auto">
 
 					<Button col = "0" text = "GitHub" tap = "launchPrestonGitHub" />
@@ -64,7 +64,7 @@
 
 				</GridLayout>
 
-				<Label id = "lblDanny" row = "17" textWrap = "true" text = "Daniel Michelin" />
+				<Label class = "lblDevName" row = "17" textWrap = "true" text = "Daniel Michelin" />
 				<GridLayout row = "18" columns = "*, *" rows = "auto">
 
 					<Button col = "0" text = "GitHub" tap = "launchDannyGitHub" />
@@ -72,7 +72,7 @@
 
 				</GridLayout>
 
-				<Label id = "lblLionel" row = "19" textWrap = "true" text = "Lionel Niyongabire" />
+				<Label class = "lblDevName" row = "19" textWrap = "true" text = "Lionel Niyongabire" />
 				<GridLayout row = "20" columns = "*, *" rows = "auto">
 
 					<Button col = "0" text = "GibHub" tap = "launchLionelGitHub" />
@@ -80,7 +80,7 @@
 
 				</GridLayout>
 
-				<Label id = "lblAlex" row = "21" textWrap = "true" text = "Alex Cadigan" />
+				<Label class = "lblDevName" row = "21" textWrap = "true" text = "Alex Cadigan" />
 				<GridLayout row = "22" columns = "*, *" rows = "auto">
 
 					<Button col = "0" text = "GitHub" tap = "launchAlexGitHub" />
