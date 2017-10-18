@@ -37,5 +37,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "pre-commit": ["lint"]
+  "pre-commit": [
+    "lint"
+  ]
 }
