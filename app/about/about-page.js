@@ -52,8 +52,45 @@ exports.goBack = function()
 // Adds the function on navigating to to module exports so it can be accessed from the XML page
 exports.onNavigatingTo = onNavigatingTo;
 
-// Opens the link to the Snapstone project on GitHub
 var utilityModule = require("utils/utils");
+
+// Opens the link to NativeScript
+exports.launchNativeScript = function()
+{
+	utilityModule.openUrl("https://www.nativescript.org/");
+};
+
+// Opens the link to Tesseract
+exports.launchTesseract = function()
+{
+	utilityModule.openUrl("http://tesseract.projectnaptha.com/");
+};
+
+// Opens the link to MongoDB
+exports.launchMongoDB = function()
+{	
+	utilityModule.openUrl("https://www.mongodb.com/");
+};
+
+// Opens the link to Node.js
+exports.launchNode = function()
+{
+	utilityModule.openUrl("https://nodejs.org/en/");
+};
+
+// Opens the link to Express.js
+exports.launchExpress = function()
+{
+	utilityModule.openUrl("https://expressjs.com/");
+};
+
+// Opens the link to Sail.js
+exports.launchSail = function()
+{
+	utilityModule.openUrl("http://sailsjs.com/");
+};
+
+// Opens the link to the Snapstone project on GitHub
 exports.launchSnapstone = function()
 {
 	utilityModule.openUrl("https://github.com/sotch-pr35mac/snapstone/tree/master");
@@ -87,4 +124,34 @@ exports.launchDannyGitHub = function()
 exports.launchDannyLinkedIn = function()
 {
 	utilityModule.openUrl("https://www.linkedin.com/in/danielmichelin/");
+};
+
+// Opens Lionel's GitHub
+exports.launchLionelGitHub = function()
+{
+	utilityModule.openUrl("https://github.com/lioniyon");
+};
+
+// Opens Lionel's LinkedIn
+exports.launchLionelLinkedIn = function()
+{
+	utilityModule.openUrl("https://www.linkedin.com/in/lionel-niyongabire-1482a195/");
+};
+
+// Opens Alex's GitHub
+exports.launchAlexGitHub = function()
+{
+	utilityModule.openUrl("https://github.com/AlexCadigan");
+};
+
+// Opens Alex's LinkedIn
+exports.launchAlexLinkedIn = function()
+{
+	utilityModule.openUrl("https://www.linkedin.com/in/alexandercadigan/");
+};
+
+// Opens the link to the license
+exports.launchLicense = function()
+{
+	utilityModule.openUrl("https://www.gnu.org/licenses/gpl-3.0.en.html");
 };
