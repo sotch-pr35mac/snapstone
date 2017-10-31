@@ -1,28 +1,27 @@
-<!--
-  @file         ::  app/settings/settings-page.xml
-  @authors      ::  Preston Wang-Stosur-Bassett <preston.wang-stosur-bassett14@kzoo.edu> (IF YOU EDIT THIS FILE ADD YOUR NAME AND EMAIL TO THIS LINE)
-  @created      ::  Sept 24, 2017
-  @updated      ::  Sept 30, 2017 - Preston Wang-Stosur-Bassett - Added Comments (IF YOU EDIT THIS FILE, REPLACE THIS LINE WITH THE DATE, YOUR NAME, AND UPDATES)
-  @description  ::  This is the XML file that defines the layout for the Settings page
+<!-- Project: Snapstone 
+	@file 				app/settings/settings-page.xml
+	@author 			Preston Wang-Stosur-Bassett <preston.wang-stosur-bassett14@kzoo.edu>, Alex Cadigan	
+	@created 			9/24/2017
+	@updated 			10/18/2017 - Alex Cadigan - Updated page
+	@description 		This is the XML file that defines the layout for the Settings page
 -->
 
-<!-- Define the page using the nativescript namespace and calling onNavigatingTo (defined in app/settings/settings-page.js) to when navigated to -->
-<Page class="page"
-  navigatingTo="onNavigatingTo"
-  xmlns="https://www.nativescript.org/tns.xsd">
+<!-- Creates the page using the NativeScript namespace and calling onNavigatingTo when navigated to -->
+<Page class = "page" navigatingTo = "onNavigatingTo" xmlns = "http://schemas.nativescript.org/tns.xsd" xmlns:CheckBox = "nativescript-checkbox">
 
-  <!-- Define the ActionBar (the bar at the top with the title of the page and some navigation options) -->
-  <ActionBar title="Settings" class="action-bar">
-    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack"/>
-  </ActionBar>
+	<!-- Defines the action bar at the top of the page -->
+	<ActionBar class = "action-bar" title = "Snapstone Settings">
 
-  <!-- Define the layout -->
-  <StackLayout id="swipable">
+    <!-- Creates a back button on the action bar -->
+    <NavigationButton text = "Go Back" android.systemIcon = "ic_menu_back" tap = "goBack" />
 
-    <!-- Add some text to the page -->
-    <Label text="Settings will go here">
-    </Label>
-    
+	</ActionBar>
+
+  <!-- Defines the layout of the page -->
+  <StackLayout id = "swipable">
+
+    <CheckBox:CheckBox text = "CheckBox Label" checked = "true" />
+
   </StackLayout>
 
 </Page>
