@@ -7,7 +7,7 @@
 -->
 
 <!-- Creates the page using the NativeScript namespace and calling onNavigatingTo when navigated to -->
-<Page class = "page" navigatingTo = "onNavigatingTo" xmlns = "http://schemas.nativescript.org/tns.xsd" xmlns:CheckBox = "nativescript-checkbox">
+<Page class = "page" navigatingTo = "onNavigatingTo" xmlns = "http://schemas.nativescript.org/tns.xsd">
 
 	<!-- Defines the action bar at the top of the page -->
 	<ActionBar class = "action-bar" title = "Snapstone Settings">
@@ -20,7 +20,20 @@
   <!-- Defines the layout of the page -->
   <StackLayout id = "swipable">
 
-    <CheckBox:CheckBox text = "CheckBox Label" checked = "true" />
+  	<!-- This label is used to tell the user if they're using simplified or traditional Chinese -->
+  	<Label id = "lblSimplifiedTraditional" textWrap = "true" text = "" />
+
+  	<!-- Holds two buttons for switching between simplified and traditional Chinese -->
+  	<GridLayout columns = "*, *" rows = "auto">
+
+		<Button col = "0" text = "Simplified" tap = "simplified" />
+    	<Button col = "1" text = "Traditional" tap = "traditional" />
+
+  	</GridLayout>
+
+  	<!-- The logout button -->
+  	<Label id = "lblPlaceHolder" />
+  	<Button text = "Log Out" tap = "logOut" />
 
   </StackLayout>
 

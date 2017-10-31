@@ -11,6 +11,16 @@ var gestures = require('ui/gestures');
 var frameModule = require('ui/frame');
 var SettingsViewModel = require('./settings-view-model');
 
+// This can be used to store app settings that will persist even when the app is closed
+var appSettings = require("application-settings");
+
+// Initializes the Chinese translatio variable to simplified Chinese if the user has not already chosen
+var hasKey = appSettings.hasKey("simplifiedTraditional");
+if (!hasKey)
+{
+	appSettings.setString("simplifiedTraditional", "simplified");
+}
+
 var settingsViewModel = new SettingsViewModel();
 
 // Define the default behavior for navigating home using this global navingateHome object
@@ -39,6 +49,17 @@ function onNavigatingTo(args) {
 
   // Add the model to the page
   page.bindingContext = settingsViewModel;
+
+  // Updates the simplified/traditional label based on the user's preferences
+  lblSimplifiedTraditional = page.getViewById("lblSimplifiedTraditional");
+  if (appSettings.getString("simplifiedTraditional") == "simplified")
+  {
+  	lblSimplifiedTraditional.text = "Simplified Chinese";
+  }
+  else
+  {
+  	lblSimplifiedTraditional.text = "Traditional Chinese";
+  }
 }
 
 // Add the function goBack to the module.exports so it can be accessed from the XML page
@@ -52,3 +73,25 @@ exports.goBack = function() {
 
 // Add onNavigatingTo to module.exports so it can be accessed in the XML page
 exports.onNavigatingTo = onNavigatingTo;
+
+// This function is called whenever the Simplified Chinese button is pressed
+exports.simplified = function()
+{
+	// Sets the global variable to simplified
+	appSettings.setString("simplifiedTraditional", "simplified");
+	lblSimplifiedTraditional.text = "Simplified Chinese";
+};
+
+// This function is called whenever the Traditional Chinese button is pressed
+exports.traditional = function()
+{
+	// Sets the global variable to traditional
+	appSettings.setString("simplifiedTraditional", "traditional");
+	lblSimplifiedTraditional.text = "Traditional Chinese";
+};
+
+// Logs the user out of the app
+exports.logOut = function()
+{
+	// Additional code needs to go here
+};
