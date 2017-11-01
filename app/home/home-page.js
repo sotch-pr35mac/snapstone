@@ -123,3 +123,25 @@ exports.openAbout = function() {
     }
   });
 };
+
+
+
+// Add openHelp to the module.exports so it can be accessed on the xml page
+/*
+ *  @function     ::  openHelp()
+ *  @description  ::  Navigate to the help page
+*/
+exports.openHelp = function() {
+  frameModule.topmost().navigate({
+    moduleName: 'help/help-page',
+    animated: true,
+    transition: {
+      name: 'slideLeft'
+    }
+  });
+};
+
+
+
+
+
