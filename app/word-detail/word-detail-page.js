@@ -10,8 +10,14 @@
 var gestures = require('ui/gestures'); // Gestures Module to handle gestures and swipes
 var frameModule = require('ui/frame'); // Frame Module that handles views and navigation
 var WordDetailViewModel = require('./word-detail-view-model'); // The Model of the word detail page
-
 var wordDetailViewModel = new WordDetailViewModel();
+// stuff to upload images
+var bghttp = require("nativescript-background-http");
+// stuff to authenticate
+var http = require("http");
+var session = bghttp.session("image-upload");
+var imagePath;
+var path = "https://safe-temple-72583.herokuapp.com";
 
 // Gloabl navigateHome object that defines the behavior for navigating home
 var navigateHome = {
@@ -37,6 +43,24 @@ function onNavigatingTo(args) {
   // Set the image view
   imageView.src = imageData.param1.src;
 
+  // send the image to our server
+  imagePath = imageData.path;
+
+  http.request({
+    url: path+"/user/login",
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    content: JSON.stringify({ username: "dmichelin", password: "dmichelin" })
+    }).then(function (response) {
+        var result = response.content.toJSON();
+        //console.log(result);
+        sendPhoto();
+    }, function (e) {
+        console.log("Error occurred " + e);
+    });
+
+
+
   // Define swipable gestures and their actions
   var myStack = page.getViewById('swipable');
   myStack.on(gestures.GestureTypes.swipe, function(args) {
@@ -58,6 +82,29 @@ function onNavigatingTo(args) {
 exports.goBack = function() {
   frameModule.topmost().navigate(navigateHome);
 };
+
+function sendPhoto(){
+    var request = {
+    url: path+"/photo/process",
+    method: "POST",
+    headers: {
+        "Content-Type": "application/octet-stream",
+        "File-Name": imagePath+""
+    },
+    description: "{ 'uploading': 'chars.jpg' }"
+  };
+
+  var task = session.uploadFile(imagePath, request);
+  task.on("progress", logEvent);
+  task.on("error", logEvent);
+  task.on("complete", logEvent);
+  function logEvent(e) {
+    console.log(e.toString());
+    console.log("currentBytes: " + e.currentBytes);
+    console.log("totalBytes: " + e.totalBytes);
+    console.log("eventName: " + e.eventName);
+  }
+}
 
 // Add the onNavigatingTo function to module.exports so it can be accessed on the xml page
 exports.onNavigatingTo = onNavigatingTo;
