@@ -23,6 +23,8 @@ var frameModule = require('ui/frame'); // Frame Module that handles views and na
 var HomeViewModel = require('./home-view-model'); // The model of the home page
 var camera = require('nativescript-camera'); // Nativescript plugin to work with the system camera
 var ImageModule = require('ui/image'); // Image Module to support images from the camera
+var imageSourceModule = require("image-source"); // support image sources
+var fs = require("tns-core-modules/file-system"); // accessing documents
 
 var homeViewModel = new HomeViewModel();
 
@@ -79,10 +81,17 @@ exports.openCamera = function() {
     .then(function (imageAsset) {
       var image = new ImageModule.Image();
       image.src = imageAsset;
+      var documents = fs.knownFolders.documents();
+      var path = fs.path.join(documents.path, "chars.png");
+      imageSourceModule.fromAsset(imageAsset)
+                .then(imageSource => {
+                     imageSource.saveToFile(path, "png");
+                 });
       var navigationOptions = {
         moduleName: 'word-detail/word-detail-page',
         context: {
-          param1: image
+          param1: image,
+          path: path
         }
       };
 

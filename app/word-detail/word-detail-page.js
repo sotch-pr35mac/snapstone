@@ -13,6 +13,7 @@ var WordDetailViewModel = require('./word-detail-view-model'); // The Model of t
 var wordDetailViewModel = new WordDetailViewModel();
 // stuff to upload images
 var bghttp = require("nativescript-background-http");
+var imageSource = require("image-source");
 // stuff to authenticate
 var http = require("http");
 var session = bghttp.session("image-upload");
@@ -94,6 +95,7 @@ function sendPhoto(){
     description: "{ 'uploading': 'chars.jpg' }"
   };
 
+  var img = imageSource.fromFile(imagePath);
   var task = session.uploadFile(imagePath, request);
   task.on("progress", logEvent);
   task.on("error", logEvent);
@@ -103,6 +105,7 @@ function sendPhoto(){
     console.log("currentBytes: " + e.currentBytes);
     console.log("totalBytes: " + e.totalBytes);
     console.log("eventName: " + e.eventName);
+    console.dir(e.response);
   }
 }
 
