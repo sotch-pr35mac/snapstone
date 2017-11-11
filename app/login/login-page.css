@@ -1,0 +1,35 @@
+/**
+* Project: Snapstone
+* @authors 			Lionel Niyongabire
+* @created 			10/23/2017
+* @description 		This file contains the CSS code for the Login page
+*/
+
+/**
+   Style  StackLayout
+*/
+
+StackLayout
+{
+    vertical-align:middle; 
+    
+}
+
+/**
+   Style the text fields
+*/
+StackLayout TextField 
+{
+    margin: 4;
+   
+}
+
+/**
+   Style the sign up button
+*/
+
+StackLayout Button 
+{
+    margin: 4;
+    background-color: red;
+}

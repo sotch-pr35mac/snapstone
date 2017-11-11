@@ -14,7 +14,7 @@ var SettingsViewModel = require('./settings-view-model');
 // This can be used to store app settings that will persist even when the app is closed
 var appSettings = require("application-settings");
 
-// Initializes the Chinese translatio variable to simplified Chinese if the user has not already chosen
+// Initializes the Chinese translation variable to simplified Chinese if the user has not already chosen
 var hasKey = appSettings.hasKey("simplifiedTraditional");
 if (!hasKey)
 {
@@ -32,6 +32,12 @@ var navigateHome = {
   transition: {
     name: 'slideRight'
   }
+};
+
+// Defines a way to navigate to the login page
+var navigateToLogin = 
+{
+  moduleName: 'login/login-page',
 };
 
 // Load this function when navigating to the page
@@ -93,5 +99,7 @@ exports.traditional = function()
 // Logs the user out of the app
 exports.logOut = function()
 {
-	// Additional code needs to go here
+	// Changes the variable measuring if the user has logged out
+  appSettings.setBoolean("userLogin", false);
+  frameModule.topmost().navigate(navigateToLogin)
 };
