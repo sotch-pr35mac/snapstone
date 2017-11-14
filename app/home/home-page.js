@@ -144,28 +144,6 @@ exports.openHelp = function() {
 // Add openSignUp to the module.exports so it can be accessed on the xml page
 /*
  *  @function     ::  openSignUp()
- *  @description  ::  Navigate to the Sign Up page
-*/
-exports.openSignUp = function() {
-  frameModule.topmost().navigate({
-    moduleName: 'signUp/signUp-page',
-    animated: true,
-    transition: {
-      name: 'slideLeft'
-    }
-  });
-};
-
-<<<<<<< HEAD
-// Add openLogin to the module.exports so it can be accessed on the xml page
-/*
- *  @function     ::  openLogin()
- *  @description  ::  Navigate to the Login page
-=======
-
-// Add openSignUp to the module.exports so it can be accessed on the xml page
-/*
- *  @function     ::  openSignUp()
  *  @description  ::  Navigate to the sign up page
 */
 exports.openSignUp = function() {
@@ -183,7 +161,6 @@ exports.openSignUp = function() {
 /*
  *  @function     ::  openLogin()
  *  @description  ::  Navigate to the login page
->>>>>>> a41577bd651270c16297666f52fdcf758ac67ee5
 */
 exports.openLogin = function() {
   frameModule.topmost().navigate({
@@ -193,13 +170,4 @@ exports.openLogin = function() {
       name: 'slideLeft'
     }
   });
-<<<<<<< HEAD
 };
-=======
-};
-
-
-
-
-
->>>>>>> a41577bd651270c16297666f52fdcf758ac67ee5
