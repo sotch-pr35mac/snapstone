@@ -14,5 +14,5 @@ function HelpViewModel() {
   return viewModel;
 }
 
-// Add AboutViewModel to the module.exports so that it can be accessed in the about-page.js
+// Add HelpViewModel to the module.exports so that it can be accessed in the help-page.js
 module.exports = HelpViewModel;

@@ -1,0 +1,32 @@
+<!--
+  @file         ::  app/signUp/signUp-page.xml
+  @authors      ::  Lionel Niyongabire <k15ln01@kzoo.edu> 
+  @created      ::  October 23, 2015
+  @updated      ::  N/A
+  @description  ::  This is the XML file that defines the layout for the sign up page
+-->
+   <!-- Define the page using the nativescript namespace and calling onNavigatingTo when navigated to -->
+  <Page class="page"
+  navigatingTo="onNavigatingTo"
+  xlmns="https://www.nativescript.org/tns.xsd">
+      
+  <!-- Define the ActionBar -->
+  <ActionBar title="Sign Up" class="action-bar">
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack" />
+  </ActionBar>
+
+  <!-- Define the layout -->
+  <StackLayout id="swipable">
+
+    <!-- Sign Up form layout with a button-->
+      <TextField hint="Username" text=""></TextField>
+      <TextField hint="Email" text=""></TextField>
+      <TextField hint="Password" secure="true"></TextField>
+      <TextField hint="Confirm password" secure="true"></TextField>
+      <Button text="Create my account"  ></Button>
+      
+    </StackLayout>
+
+</Page> 
+      
+     
