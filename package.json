@@ -9,15 +9,19 @@
     "id": "org.kzoo.snapstone",
     "tns-android": {
       "version": "3.2.0"
+    },
+    "tns-ios": {
+      "version": "3.2.0"
     }
   },
   "dependencies": {
     "nativescript-camera": "^3.1.2",
+    "nativescript-checkbox": "^3.0.1",
     "nativescript-floatingactionbutton": "^3.0.1",
     "nativescript-theme-core": "1.0.4",
     "tns-core-modules": "3.2.0"
   },
-  "author": "Alex Cardigan, Danny Michelin, Preston Wang-Stosur-Bassett",
+  "author": "Alex Cardigan, Danny Michelin, Preston Wang-Stosur-Bassett, Lionel Niyongabire",
   "devDependencies": {
     "babel-traverse": "6.26.0",
     "babel-types": "6.26.0",

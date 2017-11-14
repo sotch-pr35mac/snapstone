@@ -46,6 +46,7 @@ npm install -g commitizen
 - [Alex Cadigan](https://github.com/AlexCadigan)
 - [Danny Michelin](https://github.com/dmichelin)
 - [Preston Wang-Stosur-Bassett](http://stosur.info)
+- [Lionel Niyongabire](https://github.com/lioniyon)
 
 ### License
 This software is licensed under the [GNU Public License v3]().

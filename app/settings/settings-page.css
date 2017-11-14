@@ -1,0 +1,26 @@
+/**
+* Project: Snapstone
+* @authors 			Alex Cadigan
+* @created 			10/31/2017
+* @description 		This file contains all of the CSS code for the Settings page
+*/
+
+/**
+* This styles the simplified/traditional Chinese labal
+*/
+#lblSimplifiedTraditional
+{
+	padding-top: 50px;
+	text-align: center;
+	color: red;
+	font-size: 25%;
+	padding-bottom: 50px;
+}
+
+/**
+* This styles the placeholder labal
+*/
+#lblPlaceHolder
+{
+	padding-top: 50px;
+}

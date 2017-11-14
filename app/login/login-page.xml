@@ -1,15 +1,16 @@
 <!--
   @file         ::  app/login/login-page.xml
-  @authors      ::  Lionel Niyongabire <k15ln01@kzoo.edu> 
+  @authors      ::  Lionel Niyongabire <k15ln01@kzoo.edu> inspired by Preston Wang-Stosur-Bassett's about page
   @created      ::  October 23, 2015
   @updated      ::  N/A
   @description  ::  This is the XML file that defines the layout for the Login page
 -->
-   <!-- Define the page using the nativescript namespace and calling onNavigatingTo when navigated to -->
-  <Page class="page"
+
+<!-- Define the page using the nativescript namespace and calling onNavigatingTo when navigated to -->
+<Page class="page"
   navigatingTo="onNavigatingTo"
   xlmns="https://www.nativescript.org/tns.xsd">
-      
+
   <!-- Define the ActionBar -->
   <ActionBar title="Login" class="action-bar">
     <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack" />
@@ -17,15 +18,15 @@
 
   <!-- Define the layout -->
   <StackLayout id="swipable">
+       <!-- Form for the lgin page  -->
+    <TextField hint="Username/Email"  ></TextField>
+    <TextField hint="Password" secure="true" ></TextField>
+    <Button text="LOGIN" class="link" tap = "authenticate" ></Button>
+    
+    
+      
+    
 
-    <!-- Login form layout with a Login button-->
-      <TextField hint="Username/Email" text=""></TextField>
-      <TextField hint="Password" secure="true"></TextField>
-      <Button id="login-button" text="LOGIN" ></Button>
-      
-      
-       </StackLayout>
+  </StackLayout>
 
-</Page> 
-      
-     
+</Page>
