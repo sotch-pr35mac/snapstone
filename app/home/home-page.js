@@ -181,6 +181,17 @@ exports.openHelp = function() {
   });
 };
 
+// Open the bookmarks detail page
+exports.openDetail = function() {
+  frameModule.topmost().navigate({
+    moduleName: 'bookmark-detail/bookmark-detail',
+    animated: true,
+    transition: {
+      name: 'slideLeft'
+    }
+  });
+}
+
 // Test Add Bookmark to Database
 exports.addBookmark = function() {
   http.request({

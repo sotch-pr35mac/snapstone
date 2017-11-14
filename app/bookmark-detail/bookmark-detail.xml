@@ -1,0 +1,36 @@
+<!-- Project: Snapstone
+	@authors 			Preston Wang-Stosur-Bassett
+	@created 			11/14/2017
+	@description 		This is the XML file that builds the layout for the bookmarks detail
+-->
+
+<!-- Creates the page and calls onNavigatingTo when navigated to -->
+<Page class = "page" navigatingTo = "onNavigatingTo" xlmns = "https://www.nativescript.org/tns.xsd">
+
+	<!-- Creates the action bar at the top of the page -->
+	<ActionBar class = "action-bar" title="Bookmark">
+
+		<!-- Creates a back button -->
+		<NavigationButton text = "Go Back" android.systemIcon = "ic_menu_back" tap = "goBack" />
+
+	</ActionBar>
+
+	<!-- Creates the layout of the page -->
+
+
+	<!-- Allows the page to be vertically scrollable -->
+	<ScrollView>
+
+    <StackLayout id = "swipeable">
+
+      <Label margin="20" fontSize="20" text="Simplified: "/>
+
+      <Label margin="20" fontSize="20" text="Traditional: " />
+
+      <Label margin="20" fontSize="18" text="Pinyin: " />
+
+    </StackLayout>
+
+	</ScrollView>
+
+</Page>
