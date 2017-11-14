@@ -20,13 +20,15 @@ JavaScript modules defined in other files.
 
 // Require dependencies
 var frameModule = require('ui/frame'); // Frame Module that handles views and navigation
-var HomeViewModel = require('./home-view-model'); // The model of the home page
 var camera = require('nativescript-camera'); // Nativescript plugin to work with the system camera
 var ImageModule = require('ui/image'); // Image Module to support images from the camera
 var imageSourceModule = require("image-source"); // support image sources
 var fs = require("tns-core-modules/file-system"); // accessing documents
+var http = require('http');
+var appSettings = require('application-settings');
+var observableArray = require('data/observable-array');
 
-var homeViewModel = new HomeViewModel();
+var serverURL = "https://safe-temple-72583.herokuapp.com";
 
 // Load this function when navigating to this page
 function onNavigatingTo(args) {
@@ -36,6 +38,35 @@ function onNavigatingTo(args) {
   https://docs.nativescript.org/api-reference/classes/_ui_page_.page.html
   */
   var page = args.object;
+
+  var viewModel = new observableArray.ObservableArray();
+
+  viewModel.bookmarks = [];
+
+  http.request({
+    url: serverURL + "/user/login",
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    // Please forgive my use of plaintext username and password
+    content: JSON.stringify({ username: appSettings.getString("username"), password: appSettings.getString("password")})
+  }).then(function(response) {
+    var res = response.content.toJSON();
+    if(res.error || res.success == false) {
+
+      console.log("There was an error logging in the user and getting the user data.");
+      console.log(response.status);
+      console.log(response.message);
+      console.log(response.error);
+
+    } else {
+      //viewModel.bookmarks = response.user.bookmarks;
+
+      console.log(response.content.toString());
+      viewModel.bookmarks = res.user.bookmarks;
+
+      page.bindingContext = viewModel;
+    }
+  });
 
   /*
   A page’s bindingContext is an object that should be used to perform
@@ -49,7 +80,7 @@ function onNavigatingTo(args) {
   */
 
   // Add the model to the page
-  page.bindingContext = homeViewModel;
+  //page.bindingContext = viewModel;
 }
 
 /*
@@ -149,3 +180,50 @@ exports.openHelp = function() {
     }
   });
 };
+
+// Test Add Bookmark to Database
+exports.addBookmark = function() {
+  http.request({
+    url: serverURL + "/user/login",
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    // Please forgive my use of plaintext username and password
+    content: JSON.stringify({ username: appSettings.getString("username"), password: appSettings.getString("password")})
+  }).then(function(response) {
+    response = response.content.toJSON();
+    if(response.error) {
+
+      console.log("There was an error logging in the user and getting the user data.");
+      console.log(response.status);
+      console.log(response.message);
+      console.log(response.error);
+
+    } else {
+      http.request({
+        url: serverURL + '/bookmarks/add',
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        content: JSON.stringify({
+          traditional: '你好',
+          simplified: '你好',
+          pinyin: 'nihao',
+          definitions: [
+            'Hi',
+            'Hello',
+            'How are you'
+          ]
+        })
+      }).then(function(response) {
+        response = response.content.toJSON();
+        if(response.error) {
+          console.log("There was an error adding a bookmark.");
+          console.log(response.status);
+          console.log(response.message);
+          console.log(response.error);
+        } else {
+          alert("It should have worked. Try re-navigating to the page.");
+        }
+      })
+    }
+  });
+}
