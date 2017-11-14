@@ -18,6 +18,7 @@ var http = require("http");
 var session = bghttp.session("image-upload");
 var imagePath;
 var path = "https://safe-temple-72583.herokuapp.com";
+var appSettings = require("application-settings")
 //var path = "http://192.168.1.23:1337";
 // Gloabl navigateHome object that defines the behavior for navigating home
 var navigateHome = {
@@ -50,7 +51,8 @@ function onNavigatingTo(args) {
     url: path+"/user/login",
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    content: JSON.stringify({ username: "dmichelin", password: "dmichelin" })
+    // Please forgive my use of plaintext username and password
+    content: JSON.stringify({ username: appSettings.getString("username"), password: appSettings.getString("password")})
     }).then(function (response) {
         var result = response.content.toJSON();
         console.log(result);
