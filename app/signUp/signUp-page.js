@@ -12,6 +12,7 @@ var frameModule = require('ui/frame');
 var SignUpViewModel = require('./signUp-view-model');
 var http = require('http');
 var serverURL = "https://safe-temple-72583.herokuapp.com";
+var appSettings = require('application-settings');
 
 var signUpViewModel = new SignUpViewModel();
 
@@ -25,7 +26,7 @@ var navigateToLogin = {
   backstackVisible: false,
   clearHistory: true,
   transition: {
-    name: 'slideLeft'
+    name: 'slideRight'
   }
 };
 
@@ -77,25 +78,29 @@ exports.createAccount = function() {
   var password = page.getViewById('password').text;
   var confirmPassword = page.getViewById('confirmPassword').text;
 
-  console.log("FIRST NAME: " + firstName);
-
   if(password == confirmPassword) {
     // The passwords match, move along
     http.request({
       url: serverURL + '/user/create',
       method: 'POST',
-      content: JSON.stringify({ username: 'test', password: 'test' })
-      /*{
+      headers: { "Content-Type": "application/json" },
+      content: JSON.stringify({
         firstName: firstName,
         lastName: lastName,
         username: email,
         password: password
-      }*/
+      })
     }).then(function(response) {
+      response = response.content.toJSON();
       if(response.status == 200) {
         // The user account was successfully created,
+
+        // This is just bad practice I can't even... But.. I also need an A
+        appSettings.setString('username', email);
+        appSettings.setString('password', password);
+
         alert("Congrats! New user account created!");
-        frameModule.topmost().navigate(navigateHome);
+        frameModule.topmost().navigate(navigateToHome);
       } else {
         alert("There was an unexpected error. Please try again later.");
         console.log("There was an unexpected error.");
