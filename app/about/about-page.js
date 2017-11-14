@@ -68,7 +68,7 @@ exports.launchTesseract = function()
 
 // Opens the link to MongoDB
 exports.launchMongoDB = function()
-{	
+{
 	utilityModule.openUrl("https://www.mongodb.com/");
 };
 
@@ -109,9 +109,9 @@ exports.launchPrestonGitHub = function()
 };
 
 // Opens Preston's LinkedIn
-exports.launchPrestonLinkedIn = function()
+exports.launchPrestonWebsite = function()
 {
-	utilityModule.openUrl("https://www.linkedin.com/in/prestonstosurbassett/");
+	utilityModule.openUrl("http://www.stosur.info");
 };
 
 // Opens Danny's GitHub
