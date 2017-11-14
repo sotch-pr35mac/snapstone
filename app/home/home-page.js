@@ -22,7 +22,8 @@ JavaScript modules defined in other files.
 var frameModule = require('ui/frame'); // Frame Module that handles views and navigation
 var HomeViewModel = require('./home-view-model'); // The model of the home page
 var camera = require('nativescript-camera'); // Nativescript plugin to work with the system camera
-var ImageModule = require('ui/image'); // Image Module to support images from the camera
+var imageSource = require('image-source'); // TODO: Add comments here
+var app = require('application'); // TODO: Add comments here
 
 var homeViewModel = new HomeViewModel();
 
@@ -75,14 +76,23 @@ exports.onNavigatingTo = onNavigatingTo;
  *  @description  ::  Open the camera and allow the user to take a picture
 */
 exports.openCamera = function() {
+  // TODO: Do more comments here
   camera.takePicture({height: 300})
     .then(function (imageAsset) {
-      var image = new ImageModule.Image();
-      image.src = imageAsset;
+      function getEditableImage(assetSource) {
+        if(app.android) {
+          return imageSource.fromFile(assetSource.android);
+        } else if(app.ios) {
+          return imageSource.fromFile(assetSource.ios);
+        }
+      }
+
+      var editableImage = getEditableImage(imageAsset);
+
       var navigationOptions = {
         moduleName: 'word-detail/word-detail-page',
         context: {
-          param1: image
+          param1: editableImage
         }
       };
 
