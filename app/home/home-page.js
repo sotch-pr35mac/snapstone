@@ -141,7 +141,6 @@ exports.openHelp = function() {
   });
 };
 
-
 // Add openSignUp to the module.exports so it can be accessed on the xml page
 /*
  *  @function     ::  openSignUp()
@@ -171,9 +170,3 @@ exports.openLogin = function() {
     }
   });
 };
-
-
-
-
-
-
