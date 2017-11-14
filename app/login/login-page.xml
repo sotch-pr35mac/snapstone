@@ -18,8 +18,8 @@
   <!-- Define the layout -->
   <StackLayout id="swipable">
        <!-- Form for the lgin page  -->
-    <TextField hint="Email"  ></TextField>
-    <TextField hint="Password" secure="true" ></TextField>
+    <TextField hint="Email"  id="email"></TextField>
+    <TextField hint="Password" secure="true" id="password"></TextField>
     <Button text="Login" class="link" tap = "authenticate" ></Button>
 
     <Button text="Sign up" class="link" tap="openSignup"></Button>
