@@ -12,19 +12,17 @@
   xlmns="https://www.nativescript.org/tns.xsd">
 
   <!-- Define the ActionBar -->
-  <ActionBar title="Login" class="action-bar">
-    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack" />
+  <ActionBar title="Login to Snapstone" class="action-bar">
   </ActionBar>
 
   <!-- Define the layout -->
   <StackLayout id="swipable">
        <!-- Form for the lgin page  -->
-    <TextField hint="Username/Email"  ></TextField>
+    <TextField hint="Email"  ></TextField>
     <TextField hint="Password" secure="true" ></TextField>
-    <Button text="LOGIN" class="link" tap = "authenticate" ></Button>
+    <Button text="Login" class="link" tap = "authenticate" ></Button>
 
-
-
+    <Button text="Sign up" class="link" tap="openSignup"></Button>
 
 
   </StackLayout>

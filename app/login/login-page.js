@@ -53,6 +53,17 @@ exports.goBack = function() {
   frameModule.topmost().navigate(navigateHome);
 };
 
+// Open the sign up page for the user to sign up if they do not have an account
+exports.openSignup = function() {
+  frameModule.topmost().navigate({
+    moduleName: 'signUp/signUp-page',
+    animated: true,
+    transition: {
+      name: 'slideLeft'
+    }
+  });
+}
+
 // Add onNavigatingTo to module.exports so it can be accessed in the XML page
 exports.onNavigatingTo = onNavigatingTo;
 
