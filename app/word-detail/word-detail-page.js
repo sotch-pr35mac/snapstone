@@ -1,6 +1,6 @@
 /*
  *  @file         ::  app/word-detail/word-detail-page.js
- *  @authors      ::  Preston Wang-Stosur-Bassett <preston.wang-stosur-bassett14@kzoo.edu> (IF YOU EDIT THIS FILE, ADD YOUR NAME AND A METHOD OF CONTACT TO THIS LINE)
+ *  @authors      ::  Preston Wang-Stosur-Bassett <preston.wang-stosur-bassett14@kzoo.edu>, Daniel Michelin <daniel.michelin14@kzoo.edu>
  *  @created      ::  Sept 24, 2017
  *  @updated      ::  Sept 29, 2017 - Preston Wang-Stosur-Bassett (IF YOU EDIT THIS FILE, REPLACE THIS LINE WITH YOUR NAME AND THE DATE, AND ADD YOURSELF TO THE LIST OF AUTHORS)
  *  @description  ::  This file contains the main logic for the word detail page, which is where the app navigates after a picture is taken
@@ -13,13 +13,12 @@ var WordDetailViewModel = require('./word-detail-view-model'); // The Model of t
 var wordDetailViewModel = new WordDetailViewModel();
 // stuff to upload images
 var bghttp = require("nativescript-background-http");
-var imageSource = require("image-source");
 // stuff to authenticate
 var http = require("http");
 var session = bghttp.session("image-upload");
 var imagePath;
 var path = "https://safe-temple-72583.herokuapp.com";
-
+//var path = "http://192.168.1.23:1337";
 // Gloabl navigateHome object that defines the behavior for navigating home
 var navigateHome = {
   moduleName: 'home/home-page',
@@ -54,11 +53,11 @@ function onNavigatingTo(args) {
     content: JSON.stringify({ username: "dmichelin", password: "dmichelin" })
     }).then(function (response) {
         var result = response.content.toJSON();
-        //console.log(result);
+        console.log(result);
         sendPhoto();
     }, function (e) {
         console.log("Error occurred " + e);
-    });
+  });
 
 
 
@@ -85,27 +84,33 @@ exports.goBack = function() {
 };
 
 function sendPhoto(){
-    var request = {
+  //var temp = "https://requestb.in/1oi3baf1"
+  var request = {
     url: path+"/photo/process",
+    //url:temp,
     method: "POST",
     headers: {
         "Content-Type": "application/octet-stream",
-        "File-Name": imagePath+""
+        "File-Name": "chars.png"
     },
     description: "{ 'uploading': 'chars.jpg' }"
   };
 
-  var img = imageSource.fromFile(imagePath);
-  var task = session.uploadFile(imagePath, request);
+  var params = [{name:"photo",filename:imagePath,mimeType:'image/jpeg'}]
+  var task = session.multipartUpload(params, request);
   task.on("progress", logEvent);
   task.on("error", logEvent);
-  task.on("complete", logEvent);
+  task.on("complete", logResponse);
   function logEvent(e) {
     console.log(e.toString());
     console.log("currentBytes: " + e.currentBytes);
     console.log("totalBytes: " + e.totalBytes);
     console.log("eventName: " + e.eventName);
-    console.dir(e.response);
+    console.dir(e);
+  }
+  function logResponse(e){
+    console.log("eventName: " + e.eventName);
+    console.log(JSON.parse(e.response.getBodyAsString()).text);
   }
 }
 
