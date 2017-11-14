@@ -15,6 +15,7 @@
     }
   },
   "dependencies": {
+    "nativescript-background-http": "^3.1.0",
     "nativescript-camera": "^3.1.2",
     "nativescript-checkbox": "^3.0.1",
     "nativescript-floatingactionbutton": "^3.0.1",

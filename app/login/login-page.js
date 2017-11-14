@@ -26,7 +26,7 @@ var navigateHome = {
   backstackVisible: false,
   clearHistory: true,
   transition: {
-    name: 'slideRight'
+    name: 'slideLeft'
   }
 };
 
