@@ -47,7 +47,7 @@
 				<!-- Sets up the link to the GitHub repositories -->
 				<Label id = "lblCode" row = "12" textWrap = "true" text = "Source code:" />
 				<GridLayout row = "13" columns = "*, *" rows = "auto">
-					
+
 					<Button col = "0" text = "Snapstone" tap = "launchSnapstone" />
 					<Button col = "1" text = "Server" tap = "launchServer" />
 
@@ -60,7 +60,7 @@
 				<GridLayout row = "16" columns = "*, *" rows = "auto">
 
 					<Button col = "0" text = "GitHub" tap = "launchPrestonGitHub" />
-					<Button col = "1" text = "LinkedIn" tap = "launchPrestonLinkedIn" />
+					<Button col = "1" text = "Website" tap = "launchPrestonWebsite" />
 
 				</GridLayout>
 

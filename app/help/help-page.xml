@@ -30,6 +30,8 @@
     <Label  class="h2" text="How do I Bookmark?" > </Label>
     <Label  textWrap="true" class="h2" text="What can I do if my app fails to translate the characters in the picture?" > </Label> 
     <Label text=" Clean the camera lens and retake the picture "> </Label>
+      
+
        
       
       

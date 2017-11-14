@@ -1,0 +1,20 @@
+/**
+* Project: Snapstone
+* @authors 			Lionel Niyonagabire
+* @created 			10/27/2017
+* @description 		This file contains the CSS code for the sign up page
+*/
+
+
+/**
+* This styles StackLayout
+*/
+StackLayout
+{
+    width: 85%;
+    height: 85%;
+}
+
+ /**This styles the create-my-account button
+*/
+StackLayout Button { background-color: red;}
