@@ -20,11 +20,12 @@
   <StackLayout id="swipable">
 
     <!-- Form of the sign up page  -->
-    <TextField  hint="Username"  ></TextField>
-    <TextField hint="Email"  keyboardType="email" ></TextField>
-    <TextField hint="Password" secure="true" ></TextField>
-    <TextField hint="Confirm Password" secure="true" ></TextField>
-    <Button text="Sign up for Snapstone" class="link" ></Button>
+    <TextField hint="First Name" id="firstName"></TextField>
+    <TextField hint="Last Name" id="lastName"></TextField>
+    <TextField hint="Email"  keyboardType="email" id="email"></TextField>
+    <TextField hint="Password" secure="true" id="password"></TextField>
+    <TextField hint="Confirm Password" secure="true" id="confirmPassword"></TextField>
+    <Button text="Sign up for Snapstone" class="link" tap="createAccount"></Button>
 
 
 
