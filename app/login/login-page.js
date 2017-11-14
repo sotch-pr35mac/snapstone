@@ -10,11 +10,14 @@
 var gestures = require('ui/gestures');
 var frameModule = require('ui/frame');
 var LoginViewModel = require('./login-view-model');
+var http = require('http');
 
 // This can be used to store app settings that will persist even when the app is closed
 var appSettings = require("application-settings");
+var serverURL = "https://safe-temple-72583.herokuapp.com";
 
 var loginViewModel = new LoginViewModel();
+var page;
 
 // Define the default behavior for navigating home uisng the global navigateHome object
 var navigateHome = {
@@ -29,7 +32,7 @@ var navigateHome = {
 
 // Load this function when navigating to the page
 function onNavigatingTo(args) {
-  var page = args.object;
+  page = args.object;
 
   // Define swipable gestures and their actions
   var myStack = page.getViewById('swipable');
@@ -70,11 +73,34 @@ exports.onNavigatingTo = onNavigatingTo;
 // Authenticates the user login
 exports.authenticate = function()
 {
-  // MORE CODE NEEDED!
+  var username = page.getViewById('email').text;
+  var password = page.getViewById('password').text;
 
-  // If the login information passes authentication:
-  appSettings.setBoolean("userLogin", true);
-  frameModule.topmost().navigate(navigateHome);
+  http.request({
+    url: serverURL + '/user/login',
+    method: 'POST',
+    headers: { "Content-Type": "application/json" },
+    content: JSON.stringify({
+      username: username,
+      password: password
+    })
+  }).then(function(response) {
+    response = response.content.toJSON();
+    if(response.status == 200) {
+      // The user was successfully logged in
 
-  // Otherwise give login error message
+      // Forgive the bad practice, but i need this to work NOW
+      appSettings.setString('username', username);
+      appSettings.setString('password', password);
+
+      // If the login information passes authentication:
+      appSettings.setBoolean("userLogin", true);
+      frameModule.topmost().navigate(navigateHome);
+    } else {
+      alert("Could not log you in.");
+      console.log(response.status);
+      console.log(response.message);
+      console.log(response.error);
+    }
+  });
 }
