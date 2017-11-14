@@ -17,6 +17,8 @@
       <ActionItem tap="openSettings" ios.position="right" text="Settings" android.position="popup" />
       <ActionItem tap="openHelp" ios.position="right" ios.systemIcon="9" text="Help" android.position="popup" />
       <ActionItem tap="openAbout" ios.position="right" text="About" android.position="popup" />
+      <ActionItem tap="openSignUp" ios.position="right" text="Sign Up" android.position="popup" />
+      <ActionItem tap="openLogin" ios.position="right" text="Login" android.position="popup" />
     </ActionBar>
 
     <!-- Define the layout -->

@@ -141,7 +141,32 @@ exports.openHelp = function() {
   });
 };
 
+// Add openSignUp to the module.exports so it can be accessed on the xml page
+/*
+ *  @function     ::  openSignUp()
+ *  @description  ::  Navigate to the Sign Up page
+*/
+exports.openSignUp = function() {
+  frameModule.topmost().navigate({
+    moduleName: 'signUp/signUp-page',
+    animated: true,
+    transition: {
+      name: 'slideLeft'
+    }
+  });
+};
 
-
-
-
+// Add openLogin to the module.exports so it can be accessed on the xml page
+/*
+ *  @function     ::  openLogin()
+ *  @description  ::  Navigate to the Login page
+*/
+exports.openLogin = function() {
+  frameModule.topmost().navigate({
+    moduleName: 'login/login-page',
+    animated: true,
+    transition: {
+      name: 'slideLeft'
+    }
+  });
+};
