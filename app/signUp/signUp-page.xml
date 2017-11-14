@@ -25,9 +25,9 @@
     <TextField hint="Password" secure="true" ></TextField>
     <TextField hint="Confirm Password" secure="true" ></TextField>
     <Button text="Sign up for Snapstone" class="link" ></Button>
-    
 
-     
+
+
 
   </StackLayout>
 

@@ -21,11 +21,11 @@
        <!-- Form for the lgin page  -->
     <TextField hint="Username/Email"  ></TextField>
     <TextField hint="Password" secure="true" ></TextField>
-    <Button text="LOGIN" class="link" ></Button>
-    
-    
-      
-    
+    <Button text="LOGIN" class="link" tap = "authenticate" ></Button>
+
+
+
+
 
   </StackLayout>
 

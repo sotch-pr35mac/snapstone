@@ -3,7 +3,7 @@
  *  @authors      ::  Lionel Niyongabire <k15ln01@kzoo.edu>
  *  @created      ::  October 23, 2017
  *  @updated      ::  N/A
- *  @description  ::  This file defines the main logic for the Sign Up page
+ *  @description  ::  This file defines the main logic for the sign up page
 */
 
 // Require dependencies

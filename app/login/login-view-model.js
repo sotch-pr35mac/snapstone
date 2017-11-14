@@ -1,6 +1,6 @@
 /**
 * Project: Snapstone
-* @authors 		     Lionel Niyongabire 
+* @authors 		     Lionel Niyongabire
 * @created 			10/23/2017
 * @description 		Defines the view model for the Login page
 */
