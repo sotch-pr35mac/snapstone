@@ -28,20 +28,18 @@ function onNavigatingTo(args)
 {
 	var page = args.object;
 
-	// Defines the swipeable gestures and their actions
-	var myStack = page.getViewById("swipeable");
-	myStack.on(gestures.GestureTypes.swipe, function(args)
-	{
-		// When swiping right, navigate home
-		if (args.direction == gestures.SwipeDirection.right)
-		{
-			frameModule.topmost().navigate(navigateHome);
-		}
-	});
+  // Get the word object from the navigation context for the element that the user clicked on the home page
+  var data = page.navigationContext;
 
-	// Add the model to the page
-	page.bindingContext = aboutViewModel;
+  page.bindingContext = data;
+
+  page.getViewById('simplified').text = "Simplified: " + data.simplified;
+  page.getViewById('traditional').text = "Traditional: " + data.traditional;
+  page.getViewById('pinyin').text = "Pinyin: " + data.pinyin;
+
 }
+
+exports.onNavigatingTo = onNavigatingTo;
 
 // Adds the function go back to the module exports so it can be accessed from the XML page
 exports.goBack = function()

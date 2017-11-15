@@ -13,24 +13,33 @@
 		<!-- Creates a back button -->
 		<NavigationButton text = "Go Back" android.systemIcon = "ic_menu_back" tap = "goBack" />
 
+    <ActionItem tap="removeBookmark" ios.position="right" android.position="right" text="Remove" />
+
 	</ActionBar>
 
 	<!-- Creates the layout of the page -->
 
 
-	<!-- Allows the page to be vertically scrollable -->
-	<ScrollView>
+  <StackLayout id = "swipeable">
 
-    <StackLayout id = "swipeable">
+    <Label margin="20" fontSize="20"  id="simplified" text="" />
 
-      <Label margin="20" fontSize="20" text="Simplified: "/>
+    <Label margin="20" fontSize="20" id="traditional" text="" />
 
-      <Label margin="20" fontSize="20" text="Traditional: " />
+    <Label margin="20" fontSize="18" id="pinyin" text="" />
 
-      <Label margin="20" fontSize="18" text="Pinyin: " />
+    <Label margin="20" fontSize="18" text="Definitions: " />
 
-    </StackLayout>
+    <grid-layout rows="auto, *">
 
-	</ScrollView>
+      <list-view row="1" items="{{ definitions }}">
+          <list-view.itemTemplate>
+              <label textWrap="true" fontSize="18" margin="20" text="{{ $value }}" />
+          </list-view.itemTemplate>
+      </list-view>
+
+    </grid-layout>
+
+  </StackLayout>
 
 </Page>

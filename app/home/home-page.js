@@ -182,9 +182,13 @@ exports.openHelp = function() {
 };
 
 // Open the bookmarks detail page
-exports.openDetail = function() {
+exports.openDetail = function(args) {
+  var label = args.object;
+  var wordObject = label.bindingContext;
+
   frameModule.topmost().navigate({
     moduleName: 'bookmark-detail/bookmark-detail',
+     context: wordObject,
     animated: true,
     transition: {
       name: 'slideLeft'
