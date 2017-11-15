@@ -20,6 +20,7 @@
   <StackLayout id="swipable">
 
     <!-- Form of the sign up page  -->
+    <Image src="res://logo" stretch="aspectFit" />
     <TextField hint="First Name" id="firstName"></TextField>
     <TextField hint="Last Name" id="lastName"></TextField>
     <TextField hint="Email"  keyboardType="email" id="email"></TextField>

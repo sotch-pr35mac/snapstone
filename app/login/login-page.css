@@ -10,7 +10,7 @@
 */
 StackLayout
 {
-    vertical-align: center;
+    
     width: 85%;
     height: 85%;
 }
@@ -18,3 +18,6 @@ StackLayout
  /**This styles the login button
 */
 StackLayout Button { background-color: red;}
+
+
+
