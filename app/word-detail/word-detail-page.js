@@ -107,8 +107,27 @@ function sendPhoto(args){
     console.log("eventName: " + e.eventName);
     console.log(JSON.parse(e.response.getBodyAsString()).text);
 
-    // This should show the action bar again and allow the user to swipe away from the page
+    var jsonData = JSON.parse(e.response.getBodyAsString()).text;
+
     var page = args.object;
+    var lblTraditionalSimplified = page.getViewById("lblTraditionalSimplified");
+    var lblPinyin = page.getViewById("lblPinyin");
+    var lblDefinitions = page.getViewById("lblDefinitions");
+
+    if (jsonData != null)
+    {
+      lblTraditionalSimplified.text = jsonData.traditional;
+      lblPinyin.text = jsonData.pinyin;
+      lblDefinitions = jsonData.definitions;
+    }
+    else
+    {
+      lblTraditionalSimplified.text = "Unable to read picture";
+      lblPinyin.text = "";
+      lblDefinitions.text = "";
+    }
+
+    // This should show the action bar again and allow the user to swipe away from the page
     page.actionBarHidden = false;
     var myStack = page.getViewById('swipable');
     myStack.on(gestures.GestureTypes.swipe, function(args) 
@@ -119,6 +138,7 @@ function sendPhoto(args){
       }
     });
 
+    // Makes all of the different translation fields visible
     page.addCss("#lblPhotoUpload {visibility: hidden}");
     page.addCss("#lblTraditionalSimplified {visibility: visible}");
     page.addCss("#lblPinyin {visibility: visible}");
