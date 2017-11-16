@@ -35,6 +35,9 @@ var navigateHome = {
 function onNavigatingTo(args) {
   var page = args.object;
 
+  // Hides the action bar so the user cannot navigate away from the page
+  page.actionBarHidden = true;
+
   // Grab the image that we just took
   var imageData = page.navigationContext;
 
@@ -56,20 +59,10 @@ function onNavigatingTo(args) {
     }).then(function (response) {
         var result = response.content.toJSON();
         console.log(result);
-        sendPhoto();
+        sendPhoto(args);
+
     }, function (e) {
         console.log("Error occurred " + e);
-  });
-
-
-
-  // Define swipable gestures and their actions
-  var myStack = page.getViewById('swipable');
-  myStack.on(gestures.GestureTypes.swipe, function(args) {
-    if(args.direction == gestures.SwipeDirection.right) {
-      // When swipe right, navigate home using the behavior defined in the global navigateHome object
-      frameModule.topmost().navigate(navigateHome);
-    }
   });
 
   // Add the model to the page
@@ -85,7 +78,7 @@ exports.goBack = function() {
   frameModule.topmost().navigate(navigateHome);
 };
 
-function sendPhoto(){
+function sendPhoto(args){
   //var temp = "https://requestb.in/1oi3baf1"
   var request = {
     url: path+"/photo/process",
@@ -113,8 +106,37 @@ function sendPhoto(){
   function logResponse(e){
     console.log("eventName: " + e.eventName);
     console.log(JSON.parse(e.response.getBodyAsString()).text);
+
+    // This should show the action bar again and allow the user to swipe away from the page
+    var page = args.object;
+    page.actionBarHidden = false;
+    var myStack = page.getViewById('swipable');
+    myStack.on(gestures.GestureTypes.swipe, function(args) 
+    {
+      if(args.direction == gestures.SwipeDirection.right) 
+      {
+        frameModule.topmost().navigate(navigateHome);
+      }
+    });
+
+    page.addCss("#lblPhotoUpload {visibility: hidden}");
+    page.addCss("#lblTraditionalSimplified {visibility: visible}");
+    page.addCss("#lblPinyin {visibility: visible}");
+    page.addCss("#lblDefinitions {visibility: visible}");
   }
+
 }
 
 // Add the onNavigatingTo function to module.exports so it can be accessed on the xml page
 exports.onNavigatingTo = onNavigatingTo;
+
+var dialogs = require("ui/dialogs");
+
+// Bookmarks the current Chinese word in the user's bookmarks
+exports.bookmark = function()
+{
+  // Sends alert to the user
+  dialogs.alert({title: "Bookmarks", message: "This character is now bookmarked!", okButtonText: "Yay!"});
+
+  // Lots of additional code must go here!
+}
