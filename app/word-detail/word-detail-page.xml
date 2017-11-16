@@ -25,14 +25,18 @@
       <Image id="wordImage" stretch ="aspectFill" width="100%">
       </Image>
 
+      <!-- Label to inform the user that the photo is uploading -->
+      <Label id = "lblPhotoUpload" text = "Photo is uploading..." />
+
+      <!-- Button for users to bookmark words -->
+      <Button id = "btnBookmark" text = "Bookmark" tap = "bookmark" />
+
       <!-- Add some text to the page -->
-      <Label text="Traditional | Simplified" class="h2">
+      <Label id = "lblTraditionalSimplified" text="Traditional | Simplified" class="h2">
       </Label>
-      <Label text="pinyin" class="h3">
+      <Label id = "lblPinyin" text="pinyin:" class="h3">
       </Label>
-      <Label text="* Definition 1" class="h3">
-      </Label>
-      <Label text="* Definition 2" class="h3">
+      <Label id = "lblDefinitions" text="Definition(s):" class="h3">
       </Label>
 
     </StackLayout>
