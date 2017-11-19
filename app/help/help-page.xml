@@ -22,7 +22,7 @@
     <!-- Add some text to the page -->
     <Label textWrap="true" class="h1" text="How to use Snapstone" > </Label>
     <Label textWrap="true" text="1. Click on the camera icon in your native app to take a picture of Chinese text to translate"> </Label>
-    <Label text="2. Look at the definition(s) displayed on the screen of your app"> </Label>
+    <Label textWrap="true" text="2. Look at the definition(s) displayed on the screen of your app"> </Label>
       
     
     <Label textWrap="true" class="h1" text="Some FAQs" > </Label>
