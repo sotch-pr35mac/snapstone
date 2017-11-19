@@ -23,11 +23,11 @@
     <Label textWrap="true" class="h1" text="How to use Snapstone" > </Label>
     <Label textWrap="true" text="1. Click on the camera icon in your native app to take a picture of Chinese text to translate"> </Label>
     <Label textWrap="true" text="2. Look at the definition(s) displayed on the screen of your app"> </Label>
-      
     
     <Label textWrap="true" class="h1" text="Some FAQs" > </Label>
       
     <Label  class="h2" text="How do I Bookmark?" > </Label>
+    <Label textWrap="true" text="Click on the “Bookmark” button under the photo after the characters have been translated. "> </Label> 
     <Label  textWrap="true" class="h2" text="What can I do if my app fails to translate the characters in the picture?" > </Label> 
     <Label text=" Clean the camera lens and retake the picture "> </Label>
       
