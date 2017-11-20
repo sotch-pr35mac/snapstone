@@ -92,6 +92,10 @@
 				<Label id = "lblLicense" row = "23" textWrap = "true" text = "License:" />
 				<Button row = "24" text = "GNU Public License v3" tap = "launchLicense" />
 
+				<!-- License information -->
+				<Label id = "lblIntroQ" row = "25" textWrap = "true" text = "Privacy Policy:" />
+				<TextView row = "26" id = "lblIntroA" textWrap ="true" text = "Your bookmarks and photos are safe with us. Being students, we do not believe in sharing personal information with others. Outside possible academic adventures, we agree not to share your information to the public or other parties."/>
+
 				<Label id = "lblBlank" row = "25" />
 
 			</GridLayout>
