@@ -104,10 +104,13 @@ function sendPhoto(args){
     console.dir(e);
   }
   function logResponse(e){
-    console.log("eventName: " + e.eventName);
-    console.log(JSON.parse(e.response.getBodyAsString()).text);
+    //console.log("eventName: " + e.eventName);
+    //console.log(JSON.parse(e.response.getBodyAsString()).text);
 
-    var jsonData = JSON.parse(e.response.getBodyAsString()).text;
+    //var jsonData = JSON.parse(e.response.getBodyAsString()).text;
+    var jsonData = e.response.toJSON();
+
+    alert(jsonData.length);
 
     var page = args.object;
     var lblTraditionalSimplified = page.getViewById("lblTraditionalSimplified");
@@ -130,9 +133,9 @@ function sendPhoto(args){
     // This should show the action bar again and allow the user to swipe away from the page
     page.actionBarHidden = false;
     var myStack = page.getViewById('swipable');
-    myStack.on(gestures.GestureTypes.swipe, function(args) 
+    myStack.on(gestures.GestureTypes.swipe, function(args)
     {
-      if(args.direction == gestures.SwipeDirection.right) 
+      if(args.direction == gestures.SwipeDirection.right)
       {
         frameModule.topmost().navigate(navigateHome);
       }
