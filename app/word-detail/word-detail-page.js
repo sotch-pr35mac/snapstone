@@ -104,13 +104,10 @@ function sendPhoto(args){
     console.dir(e);
   }
   function logResponse(e){
-    //console.log("eventName: " + e.eventName);
-    //console.log(JSON.parse(e.response.getBodyAsString()).text);
+    console.log("eventName: " + e.eventName);
+    console.log(JSON.parse(e.response.getBodyAsString()));
 
-    //var jsonData = JSON.parse(e.response.getBodyAsString()).text;
-    var jsonData = e.response.toJSON();
-
-    alert(jsonData.length);
+    var jsonData = JSON.parse(e.response.getBodyAsString());
 
     var page = args.object;
     var lblTraditionalSimplified = page.getViewById("lblTraditionalSimplified");
