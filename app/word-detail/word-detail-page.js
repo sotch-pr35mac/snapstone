@@ -114,17 +114,17 @@ function sendPhoto(args){
     var lblPinyin = page.getViewById("lblPinyin");
     var lblDefinitions = page.getViewById("lblDefinitions");
 
-    if (jsonData != null)
+    if (jsonData.translation.length > 0)
     {
-      lblTraditionalSimplified.text = jsonData.traditional;
-      lblPinyin.text = jsonData.pinyin;
-      lblDefinitions = jsonData.definitions;
+      lblTraditionalSimplified.text = jsonData.translation;
+      //lblPinyin.text = jsonData.translation;
+      //lblDefinitions.text = jsonData.translation;
     }
     else
     {
       lblTraditionalSimplified.text = "Unable to read picture";
-      lblPinyin.text = "";
-      lblDefinitions.text = "";
+      //lblPinyin.text = "";
+      //lblDefinitions.text = "";
     }
 
     // This should show the action bar again and allow the user to swipe away from the page

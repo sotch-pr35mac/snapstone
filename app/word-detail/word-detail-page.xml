@@ -32,12 +32,12 @@
       <Button id = "btnBookmark" text = "Bookmark" tap = "bookmark" />
 
       <!-- Add some text to the page -->
-      <Label id = "lblTraditionalSimplified" text="Traditional | Simplified" class="h2">
+      <Label id = "lblTraditionalSimplified" text="" textWrap="true" class="h2">
       </Label>
-      <Label id = "lblPinyin" text="pinyin:" class="h3">
-      </Label>
-      <Label id = "lblDefinitions" text="Definition(s):" class="h3">
-      </Label>
+      <!--<Label id = "lblPinyin" text="" class="h3">
+      </Label> -->
+      <!-- <Label id = "lblDefinitions" text="" class="h3">
+      </Label> -->
 
     </StackLayout>
   </ScrollView>
