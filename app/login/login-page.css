@@ -1,0 +1,23 @@
+/**
+* Project: Snapstone
+* @authors 			Lionel Niyongabire
+* @created 			10/26/2017
+* @description 		This file contains the CSS code for the login page
+*/
+
+/**
+* This styles StackLayout
+*/
+StackLayout
+{
+    
+    width: 85%;
+    height: 85%;
+}
+
+ /**This styles the login button
+*/
+StackLayout Button { background-color: red;}
+
+
+

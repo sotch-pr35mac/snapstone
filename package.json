@@ -1,27 +1,46 @@
 {
   "description": "OCR Character Lookup for Chinese",
-  "license": "SEE LICENSE IN <your-license-filename>",
-  "readme": "NativeScript Application",
-  "repository": "<fill-your-repository-here>",
+  "license": "GPL-3.0",
+  "readme": "README.md",
+  "version": "0.0.1",
+  "name": "Snapstone",
+  "repository": "https://github.com/sotch-pr35mac/snapstone",
   "nativescript": {
     "id": "org.kzoo.snapstone",
     "tns-android": {
       "version": "3.2.0"
+    },
+    "tns-ios": {
+      "version": "3.2.0"
     }
   },
   "dependencies": {
+    "nativescript-background-http": "^3.1.0",
     "nativescript-camera": "^3.1.2",
+    "nativescript-checkbox": "^3.0.1",
+    "nativescript-floatingactionbutton": "^3.0.1",
     "nativescript-theme-core": "1.0.4",
     "tns-core-modules": "3.2.0"
   },
-  "author": "Alex Cadigan, Danny Michelin, Preston Wang-Stosur-Bassett",
+  "author": "Alex Cardigan, Danny Michelin, Preston Wang-Stosur-Bassett, Lionel Niyongabire",
   "devDependencies": {
     "babel-traverse": "6.26.0",
     "babel-types": "6.26.0",
     "babylon": "6.18.0",
-    "lazy": "1.0.11"
+    "cz-conventional-changelog": "^2.0.0",
+    "eslint": "^4.8.0",
+    "lazy": "1.0.11",
+    "precommit-hook-eslint": "^3.0.0"
   },
   "scripts": {
-    "start": "tns run"
-  }
+    "start": "tns run",
+    "lint": "./node_modules/.bin/eslint ./app/*.js ./app/*/*.js",
+    "validate": "npm ls"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "pre-commit": []
 }

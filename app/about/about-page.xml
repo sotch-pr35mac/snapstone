@@ -1,0 +1,107 @@
+<!-- Project: Snapstone
+	@authors 			Preston Wang-Stosur-Bassett, Alex Cadigan
+	@created 			9/20/2017
+	@description 		This is the XML file that builds the layout for the About page
+-->
+
+<!-- Creates the page and calls onNavigatingTo when navigated to -->
+<Page class = "page" navigatingTo = "onNavigatingTo" xlmns = "https://www.nativescript.org/tns.xsd">
+
+	<!-- Creates the action bar at the top of the page -->
+	<ActionBar class = "action-bar" title = "About Snapstone">
+
+		<!-- Creates a back button -->
+		<NavigationButton text = "Go Back" android.systemIcon = "ic_menu_back" tap = "goBack" />
+
+	</ActionBar>
+
+	<!-- Creates the layout of the page -->
+	<StackLayout id = "swipeable">
+
+		<!-- Allows the page to be vertically scrollable -->
+		<ScrollView>
+
+			<!-- Stores all the page elements in a grid layout (helps with making everything scrollable) -->
+			<GridLayout column = "auto" rows = "auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto">
+
+				<!-- The version number -->
+				<Label id = "lblVersion" row = "0" textWrap = "true" text = "Version 0.0.1" />
+
+				<!-- Introduction to what Snapstone is -->
+				<Label id = "lblIntroQ" row = "1" textWrap = "true" text = "What is Snapstone?" />
+				<Label id = "lblIntroA" row = "2" textWrap = "true" text = "Snapstone is an open source, cross-platform, app that uses OCR (optical character recognition) software to identify and translate Chinese characters.  If you don't know what a character is, just snap a picture of it!" />
+
+				<!-- Explaining the Snapstone name -->
+				<Label id = "lblNameQ" row = "3" textWrap = "true" text = "What's with the name?" />
+				<Label id = "lblNameA" row = "4" textWrap = "true" text = "SNAP a picture + Rosetta STONE = SNAPSTONE!" />
+
+				<!-- What Snapstone is built on -->
+				<Label id = "lblBuiltOn" row = "5" textWrap = "true" text = "Built on:" />
+				<Button row = "6" text = "NativeScript" tap = "launchNativeScript" />
+				<Button row = "7" text = "Tesseract.js" tap = "launchTesseract" />
+				<Button row = "8" text = "MongoDB" tap = "launchMongoDB" />
+				<Button row = "9" text = "Node.js" tap = "launchNode" />
+				<Button row = "10" text = "Express.js" tap = "launchExpress" />
+				<Button row = "11" text = "Sail.js" tap = "launchSail" />
+
+				<!-- Sets up the link to the GitHub repositories -->
+				<Label id = "lblCode" row = "12" textWrap = "true" text = "Source code:" />
+				<GridLayout row = "13" columns = "*, *" rows = "auto">
+
+					<Button col = "0" text = "Snapstone" tap = "launchSnapstone" />
+					<Button col = "1" text = "Server" tap = "launchServer" />
+
+				</GridLayout>
+
+				<!-- Sets up links to the developers GitHub accounts and LinkedIn -->
+				<Label id = "lblDevelopers" row = "14" textWrap = "true" text = "Developers:" />
+
+				<Label class = "lblDevName" row = "15" textWrap = "true" text = "Preston Wang-Stosur-Bassett" />
+				<GridLayout row = "16" columns = "*, *" rows = "auto">
+
+					<Button col = "0" text = "GitHub" tap = "launchPrestonGitHub" />
+					<Button col = "1" text = "Website" tap = "launchPrestonWebsite" />
+
+				</GridLayout>
+
+				<Label class = "lblDevName" row = "17" textWrap = "true" text = "Daniel Michelin" />
+				<GridLayout row = "18" columns = "*, *" rows = "auto">
+
+					<Button col = "0" text = "GitHub" tap = "launchDannyGitHub" />
+					<Button col = "1" text = "LinkedIn" tap = "launchDannyLinkedIn" />
+
+				</GridLayout>
+
+				<Label class = "lblDevName" row = "19" textWrap = "true" text = "Lionel Niyongabire" />
+				<GridLayout row = "20" columns = "*, *" rows = "auto">
+
+					<Button col = "0" text = "GibHub" tap = "launchLionelGitHub" />
+					<Button col = "1" text = "LinkedIn" tap = "launchLionelLinkedIn" />
+
+				</GridLayout>
+
+				<Label class = "lblDevName" row = "21" textWrap = "true" text = "Alex Cadigan" />
+				<GridLayout row = "22" columns = "*, *" rows = "auto">
+
+					<Button col = "0" text = "GitHub" tap = "launchAlexGitHub" />
+					<Button col = "1" text = "LinkedIn" tap = "launchAlexLinkedIn" />
+
+				</GridLayout>
+
+				<!-- License information -->
+				<Label id = "lblLicense" row = "23" textWrap = "true" text = "License:" />
+				<Button row = "24" text = "GNU Public License v3" tap = "launchLicense" />
+
+				<!-- License information -->
+				<Label id = "lblIntroQ" row = "25" textWrap = "true" text = "Privacy Policy:" />
+				<TextView row = "26" id = "lblIntroA" textWrap ="true" text = "Your bookmarks and photos are safe with us. Being students, we do not believe in sharing personal information with others. Outside possible academic adventures, we agree not to share your information to the public or other parties."/>
+
+				<Label id = "lblBlank" row = "25" />
+
+			</GridLayout>
+
+		</ScrollView>
+
+	</StackLayout>
+
+</Page>

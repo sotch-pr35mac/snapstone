@@ -1,0 +1,37 @@
+<!--
+  @file         ::  app/home/home-page.xml
+  @authors      ::  Preston Wang-Stosur-Bassett <preston.wang-stosur-bassett14@kzoo.edu> (IF YOU EDIT THIS FILE ADD YOUR NAME AND CONTACT INFO TO THIS LINE)
+  @created      ::  Sept 24, 2017
+  @updated      ::  Sept 29, 2017 - Preston Wang-Stosur-Bassett (IF YOU EDIT THIS FILE, REPLACE THIS LINE WITH YOUR NAME AND DATE)
+  @description  ::  This is the XML file that defines the layout for the home page, which is loaded when the app opens, and displays the bookmarks
+-->
+
+<!-- Define the page with the nativescript and nativescript-floatingactionbutton (nativescript plugin to support floating action button) and call loaded when the page is loaded, and call onNavigatingTo when the page has been navigated to -->
+<Page loaded="loaded" class="page"
+    navigatingTo="onNavigatingTo"
+    xmlns="http://www.nativescript.org/tns.xsd"
+    xmlns:FAB="nativescript-floatingactionbutton">
+
+    <!-- Define the ActionBar (the bar at the top with the title of the page and some navigation options) -->
+    <ActionBar title="Snapstone" class="action-bar">
+      <ActionItem tap="openSettings" ios.position="right" text="Settings" android.position="popup" />
+      <ActionItem tap="openAbout" ios.position="right" ios.systemIcon="9" text="About" android.position="popup" />
+      <ActionItem tap="openHelp" ios.position="right" ios.systemIcon="9" text="Help" android.position="popup" />
+      <ActionItem tap="addBookmark" text="Test: Add Bookmark" android.position="popup" />
+    </ActionBar>
+
+    <!-- Define the layout -->
+    <grid-layout rows="auto, *">
+        <!-- Define the list view (which presumably will hold the bookmarks when that time comes) -->
+        <list-view row="1" items="{{ bookmarks }}" visibility="{{ (bookmarks.length > 0) ? 'visible' : 'collapsed' }}">
+            <list-view.itemTemplate>
+                <label textWrap="true" fontSize="18" margin="20" text="{{ simplified }}" tap="openDetail" />
+            </list-view.itemTemplate>
+        </list-view>
+
+        <Label textWrap="true" fontSize="24" margin="20" text="No Bookmarks" style="horizontal-align: center" visibility="{{ (bookmarks.length < 1) ? 'visible' : 'collapsed' }}"/>
+
+        <!-- Define the Floating Action Button, which will open the camera when clicked -->
+        <FAB:fab tap="openCamera" row="1" android.systemIcon="ic_menu_camera" icon="ic_menu_camera" ios.systemIcon="15" class="fab" rippleColor="#f1f1f1" />
+    </grid-layout>
+</Page>

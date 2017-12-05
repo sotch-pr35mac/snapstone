@@ -1,0 +1,36 @@
+<!--
+  @file         ::  app/signUp/signUp-page.xml
+  @authors      ::  Lionel Niyongabire <k15ln01@kzoo.edu> inspired by Preston Wang-Stosur-Bassett's about page
+  @created      ::  October 23, 2015
+  @updated      ::  N/A
+  @description  ::  This is the XML file that defines the layout for the Sign Up page
+-->
+
+<!-- Define the page using the nativescript namespace and calling onNavigatingTo when navigated to -->
+<Page class="page"
+  navigatingTo="onNavigatingTo"
+  xlmns="https://www.nativescript.org/tns.xsd">
+
+  <!-- Define the ActionBar -->
+  <ActionBar title="Sign Up" class="action-bar">
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack" />
+  </ActionBar>
+
+  <!-- Define the layout -->
+  <StackLayout id="swipable">
+
+    <!-- Form of the sign up page  -->
+    <Image src="res://logo" stretch="aspectFit" />
+    <TextField hint="First Name" id="firstName"></TextField>
+    <TextField hint="Last Name" id="lastName"></TextField>
+    <TextField hint="Email"  keyboardType="email" id="email"></TextField>
+    <TextField hint="Password" secure="true" id="password"></TextField>
+    <TextField hint="Confirm Password" secure="true" id="confirmPassword"></TextField>
+    <Button text="Sign up for Snapstone" class="link" tap="createAccount"></Button>
+
+
+
+
+  </StackLayout>
+
+</Page>
